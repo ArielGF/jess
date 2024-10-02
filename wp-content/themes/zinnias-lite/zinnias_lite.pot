@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Zinnias Lite\n"
+"POT-Creation-Date: 2015-12-23 13:24+0600\n"
+"PO-Revision-Date: 2015-12-23 13:24+0600\n"
+"Last-Translator: \n"
+"Language-Team: ShapedTheme <shapedtheme@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.7\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:8
+msgid "Oops, This Page Could Not Be Found!"
+msgstr ""
+
+#: ../404.php:9
+msgid "404"
+msgstr ""
+
+#: ../comments.php:10
+msgid "No Comment"
+msgstr ""
+
+#: ../comments.php:10
+msgid "One Comments"
+msgstr ""
+
+#: ../comments.php:10 ../content-post.php:58 ../content-post.php:88
+#: ../content-post.php:117 ../content-post.php:142 ../content-single.php:45
+#: ../content-single.php:73 ../content-single.php:100
+#: ../content-single.php:119
+msgid "% Comments"
+msgstr ""
+
+#: ../comments.php:29
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:30
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:31
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:36
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:46
+msgid "Name *"
+msgstr ""
+
+#: ../comments.php:47
+msgid "Email *"
+msgstr ""
+
+#: ../comments.php:48
+msgid "Website url"
+msgstr ""
+
+#: ../comments.php:57
+msgid "Write your comment..."
+msgstr ""
+
+#: ../comments.php:58
+msgid "Post Comment"
+msgstr ""
+
+#: ../content-none.php:3
+msgid "No hay publicaciones"
+msgstr ""
+
+#: ../content-none.php:9
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:14
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-none.php:19
+msgid ""
+"Parece que no podemos encontrar lo que estas buscando. Tal vez, continuar buscando pueda ayudar. "
+""
+msgstr ""
+
+#: ../content-page.php:16
+msgid "Pages:"
+msgstr ""
+
+#: ../content-page.php:23 ../functions.php:186
+msgid "Edit"
+msgstr ""
+
+#: ../content-post.php:18 ../content-post.php:70 ../content-post.php:99
+#: ../content-post.php:129
+msgid "Sticky Post"
+msgstr ""
+
+#: ../content-post.php:53 ../content-post.php:83 ../content-post.php:112
+#: ../content-post.php:137 ../content-single.php:40
+#: ../content-single.php:68 ../content-single.php:95
+#: ../content-single.php:114
+msgid "By"
+msgstr ""
+
+#: ../content-post.php:55 ../content-post.php:85 ../content-post.php:114
+#: ../content-post.php:139 ../content-single.php:42
+#: ../content-single.php:70 ../content-single.php:97
+#: ../content-single.php:116
+msgid "On "
+msgstr ""
+
+#: ../content-post.php:57 ../content-post.php:87 ../content-post.php:116
+#: ../content-post.php:141 ../content-single.php:44
+#: ../content-single.php:72 ../content-single.php:99
+#: ../content-single.php:118
+msgid "0 Comentario"
+msgstr ""
+
+#: ../content-post.php:58 ../content-post.php:88 ../content-post.php:117
+#: ../content-post.php:142 ../content-single.php:45
+#: ../content-single.php:73 ../content-single.php:100
+#: ../content-single.php:119
+msgid "1 Comentario"
+msgstr ""
+
+#: ../content-post.php:152
+msgid "<span class=\"text-uppercase\">Leer artículo completo</span>"
+msgstr ""
+
+#: ../functions.php:36
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:122
+msgid "Blog Sidebar"
+msgstr ""
+
+#: ../functions.php:151
+msgid "(Edit)"
+msgstr ""
+
+#: ../functions.php:162
+msgid "Reply"
+msgstr ""
+
+#: ../functions.php:179
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/customizer/customizer_settings.php:10
+msgid "Footer"
+msgstr ""
+
+#: ../inc/customizer/customizer_settings.php:45
+msgid "Upload Logo"
+msgstr ""
+
+#: ../inc/customizer/customizer_settings.php:60
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: ../inc/template-tags.php:16
+msgid "<i class=\"fa fa-angle-double-left\"></i> Prev Posts"
+msgstr ""
+
+#: ../inc/template-tags.php:23
+msgid "Next Posts <i class=\"fa fa-angle-double-right\"></i>"
+msgstr ""
+
+#: ../inc/template-tags.php:103
+#, php-format
+msgid "Categoría de <span class=\"archive-name\">%s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:105
+#, php-format
+msgid "Etiquetado como <span class=\"archive-name\">%s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:107
+#, php-format
+msgid "Autor <span class=\"archive-name\">%s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:109
+#, php-format
+msgid "Filtrado por año <span class=\"archive-name\">%s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:109
+msgid "Y"
+msgstr ""
+
+#: ../inc/template-tags.php:111
+#, php-format
+msgid "Filtrado por mes <span class=\"archive-name\">%s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:111
+msgid "F Y"
+msgstr ""
+
+#: ../inc/template-tags.php:113
+#, php-format
+msgid "Filtrado por día <span class=\"archive-name\">%s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:113
+msgid "F j, Y"
+msgstr ""
+
+#: ../inc/template-tags.php:117
+msgid "Asides"
+msgstr ""
+
+#: ../inc/template-tags.php:119
+msgid "Galleries"
+msgstr ""
+
+#: ../inc/template-tags.php:121
+msgid "Images"
+msgstr ""
+
+#: ../inc/template-tags.php:123
+msgid "Videos"
+msgstr ""
+
+#: ../inc/template-tags.php:125
+msgid "Quotes"
+msgstr ""
+
+#: ../inc/template-tags.php:127
+msgid "Links"
+msgstr ""
+
+#: ../inc/template-tags.php:129
+msgid "Statuses"
+msgstr ""
+
+#: ../inc/template-tags.php:131
+msgid "Audio"
+msgstr ""
+
+#: ../inc/template-tags.php:133
+msgid "Chats"
+msgstr ""
+
+#: ../inc/template-tags.php:136
+#, php-format
+msgid "Browse Archives by <span class=\"archive-name\">%s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:140
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: ../inc/template-tags.php:142
+msgid "Archives"
+msgstr ""
+
+#: ../search.php:7
+#, php-format
+msgid ""
+"Search Results by <span\n"
+"\t\t\t\tclass=\"archive-name\">%s</span>"
+msgstr ""
+
+#: ../searchform.php:2
+msgid "Buscar"
+msgstr ""

@@ -1,0 +1,47 @@
+#gmoplugLeft{
+	float:left;
+	width:650px;
+}
+#gmoplugRight{
+	float:right;
+	width:246px;
+	background:#fff;
+	border:2px solid #dcdcdc;
+	color:#646464;
+	margin: 0 0 0 10px;
+
+	p.title{
+		background-color:#dcdcdc;
+		color:#646464;
+		font-size:23px;
+		font-weight:normal;
+		margin:0;
+		text-align:center;
+		line-height:56px;
+	}
+
+	div{
+		padding: 0 18px 54px;
+
+		h3{
+			color:#646464;
+			font-size:14px;
+			font-weight:bold;
+			padding:0;
+			border:0;
+			margin: 23px 0 8px;
+		}
+		p{
+			font-size:14px;
+			line-height:20px;
+			margin: 5px 0 33px;
+		}
+		a.logo{
+			display: block;
+			text-align: center;
+			padding: 22px 0 0;
+		}
+
+	}
+
+ }/* #gmoplugRight */

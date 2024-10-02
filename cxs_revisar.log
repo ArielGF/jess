@@ -1,0 +1,25 @@
+
+----------- SCAN REPORT -----------
+TimeStamp: Wed, 28 Oct 2020 12:51:35 +0000
+(/usr/sbin/cxs --nobayes --clamdsock /var/run/clamav/clamd.sock --deep --defapache nobody --doptions Mv --exploitscan --nofallback --filemax 100000 --noforce --html --ignore /etc/cxs/cxs.ignore --MD5 --options mMOLfSGcChexdnwWZDR --qoptions Mhv --report /root/traslados/11577/cxs_revisar.log --sizemax 500000 --ssl --summary --nosversionscan --timemax 60 --nounofficial --virusscan --voptions mfhex --xtra /etc/cxs/cxs.xtra /root/traslados/11577)
+
+
+Scanning /root/traslados/11577:
+
+'/root/traslados/11577/logs/access.log.current'
+# Symlink to [access.log.44.3] (md5sum:458e4bc22ccfd08475a88b97346fbe6d)
+
+'/root/traslados/11577/wp-includes/js/plupload/plupload.silverlight.xap'
+# (compressed file: Moxie.dll [depth: 1]) MS Windows Binary/Executable [application/x-winexec] (md5sum:747100c185cf33f6588930a5941d62f7) (md5sum:aeabf225dda58db0f80b1cbfcb7a0c51)
+
+----------- SCAN SUMMARY -----------
+Scanned directories: 922
+Scanned files: 9596
+Ignored items: 78
+Suspicious matches: 2
+Viruses found: 0
+Fingerprint matches: 0
+Data scanned: 739.31 MB
+Scan time/item: 0.011 sec
+Scan time: 116.088 sec
+

@@ -1,0 +1,167 @@
+Oct 28 11:59:47 10.71.57.0 u85761628 Connection from 10.71.57.0 port 58418 on 82.165.86.169 port 22
+Oct 28 11:59:47 10.71.57.0 u85761628 Accepted password for u85761628 from 10.71.57.0 port 58418 ssh2
+Oct 28 11:59:47 10.71.57.0 u85761628 Starting session: subsystem 'sftp' for u85761628 from 10.71.57.0 port 58418 id 0
+Oct 28 11:59:47 10.71.57.0 u85761628 session opened for local user u85761628 from [10.71.57.0]
+Oct 28 11:59:49 10.71.57.0 u85761628 Received disconnect from 10.71.57.0 port 58418:11: disconnected by user
+Oct 28 11:59:49 10.71.57.0 u85761628 session closed for local user u85761628 from [10.71.57.0]
+Oct 28 11:59:50 10.71.57.0 u85761628 Connection from 10.71.57.0 port 61990 on 82.165.86.169 port 22
+Oct 28 11:59:50 10.71.57.0 u85761628 Accepted password for u85761628 from 10.71.57.0 port 61990 ssh2
+Oct 28 11:59:50 10.71.57.0 u85761628 Starting session: subsystem 'sftp' for u85761628 from 10.71.57.0 port 61990 id 0
+Oct 28 11:59:50 10.71.57.0 u85761628 session opened for local user u85761628 from [10.71.57.0]
+Oct 28 11:59:50 10.71.57.0 u85761628 open "/filetestcms.txt" flags WRITE,CREATE,TRUNCATE mode 0666
+Oct 28 11:59:50 10.71.57.0 u85761628 set "/filetestcms.txt" size 15
+Oct 28 11:59:50 10.71.57.0 u85761628 [10.71.57.0|ftruncate|0|0|15|0|0|2f66696c6574657374636d732e747874|]
+Oct 28 11:59:50 10.71.57.0 u85761628 set "/filetestcms.txt" modtime 20201028-11:59:50
+Oct 28 11:59:50 10.71.57.0 u85761628 [10.71.57.0|futimes|0|0|1603886390|0|0|2f66696c6574657374636d732e747874|]
+Oct 28 11:59:50 10.71.57.0 u85761628 close "/filetestcms.txt" bytes read 0 written 15
+Oct 28 11:59:50 10.71.57.0 u85761628 [10.71.57.0|put|0|15|0|0|0|2f66696c6574657374636d732e747874|]
+Oct 28 11:59:50 10.71.57.0 u85761628 Received disconnect from 10.71.57.0 port 61990:11: disconnected by user
+Oct 28 11:59:50 10.71.57.0 u85761628 session closed for local user u85761628 from [10.71.57.0]
+Oct 28 11:59:53 10.71.56.0 u85761628 Connection from 10.71.56.0 port 32918 on 82.165.86.169 port 22
+Oct 28 11:59:53 10.71.56.0 u85761628 Accepted password for u85761628 from 10.71.56.0 port 32918 ssh2
+Oct 28 11:59:53 10.71.56.0 u85761628 Starting session: subsystem 'sftp' for u85761628 from 10.71.56.0 port 32918 id 0
+Oct 28 11:59:53 10.71.56.0 u85761628 session opened for local user u85761628 from [10.71.56.0]
+Oct 28 11:59:53 10.71.56.0 u85761628 remove name "/filetestcms.txt"
+Oct 28 11:59:53 10.71.56.0 u85761628 [10.71.56.0|rm|0|0|0|0|0|2f66696c6574657374636d732e747874|]
+Oct 28 11:59:53 10.71.56.0 u85761628 Received disconnect from 10.71.56.0 port 32918:11: disconnected by user
+Oct 28 11:59:53 10.71.56.0 u85761628 session closed for local user u85761628 from [10.71.56.0]
+Oct 28 12:34:14 10.71.57.0 u85761628 Connection from 10.71.57.0 port 22176 on 82.165.86.169 port 22
+Oct 28 12:34:15 10.71.57.0 u85761628 Accepted password for u85761628 from 10.71.57.0 port 22176 ssh2
+Oct 28 12:34:15 10.71.57.0 u85761628 Starting session: subsystem 'sftp' for u85761628 from 10.71.57.0 port 22176 id 0
+Oct 28 12:34:15 10.71.57.0 u85761628 session opened for local user u85761628 from [10.71.57.0]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/.htaccess" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/.htaccess" bytes read 235 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|235|0|0|0|2f2e6874616363657373|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/index.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/index.php" bytes read 418 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|418|0|0|0|2f696e6465782e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/licencia.txt" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/licencia.txt" bytes read 17935 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|17935|0|0|0|2f6c6963656e6369612e747874|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/license.txt" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/license.txt" bytes read 19935 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|19935|0|0|0|2f6c6963656e73652e747874|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/readme.html" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/readme.html" bytes read 7338 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|7338|0|0|0|2f726561646d652e68746d6c|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-activate.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-activate.php" bytes read 6450 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|6450|0|0|0|2f77702d61637469766174652e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-blog-header.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-blog-header.php" bytes read 364 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|364|0|0|0|2f77702d626c6f672d6865616465722e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-comments-post.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-comments-post.php" bytes read 1476 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|1476|0|0|0|2f77702d636f6d6d656e74732d706f73742e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-config.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-config.php" bytes read 3246 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|3246|0|0|0|2f77702d636f6e6669672e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-cron.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-cron.php" bytes read 3286 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|3286|0|0|0|2f77702d63726f6e2e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-links-opml.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-links-opml.php" bytes read 2380 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|2380|0|0|0|2f77702d6c696e6b732d6f706d6c2e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-load.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-load.php" bytes read 3316 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|3316|0|0|0|2f77702d6c6f61642e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-login.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-login.php" bytes read 33862 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|33862|0|0|0|2f77702d6c6f67696e2e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-mail.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-mail.php" bytes read 8094 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|8094|0|0|0|2f77702d6d61696c2e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-settings.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-settings.php" bytes read 13106 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|13106|0|0|0|2f77702d73657474696e67732e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-signup.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-signup.php" bytes read 28624 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|28624|0|0|0|2f77702d7369676e75702e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/wp-trackback.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/wp-trackback.php" bytes read 4035 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|4035|0|0|0|2f77702d747261636b6261636b2e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/xmlrpc.php" flags READ mode 0666
+Oct 28 12:34:15 10.71.57.0 u85761628 close "/xmlrpc.php" bytes read 3061 written 0
+Oct 28 12:34:15 10.71.57.0 u85761628 [10.71.57.0|get|0|3061|0|0|0|2f786d6c7270632e706870|]
+Oct 28 12:34:15 10.71.57.0 u85761628 open "/logs/.htaccess" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/.htaccess" bytes read 267 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|1|267|0|0|0|2f6c6f67732f2e6874616363657373|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.36.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.36.gz" bytes read 829556 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|829556|0|0|0|2f6c6f67732f6163636573732e6c6f672e33362e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.37.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.37.gz" bytes read 809224 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|809224|0|0|0|2f6c6f67732f6163636573732e6c6f672e33372e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.38.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.38.gz" bytes read 802968 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|802968|0|0|0|2f6c6f67732f6163636573732e6c6f672e33382e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.39.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.39.gz" bytes read 768850 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|768850|0|0|0|2f6c6f67732f6163636573732e6c6f672e33392e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.40.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.40.gz" bytes read 1107080 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|1107080|0|0|0|2f6c6f67732f6163636573732e6c6f672e34302e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.41.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.41.gz" bytes read 692794 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|692794|0|0|0|2f6c6f67732f6163636573732e6c6f672e34312e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.42.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.42.gz" bytes read 749271 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|749271|0|0|0|2f6c6f67732f6163636573732e6c6f672e34322e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.43.1.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.43.1.gz" bytes read 114589 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|114589|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e312e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.43.2.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.43.2.gz" bytes read 101961 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|101961|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e322e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.43.3.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.43.3.gz" bytes read 120730 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|120730|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e332e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.43.4.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.43.4.gz" bytes read 259986 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|259986|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e342e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.43.5.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.43.5.gz" bytes read 131541 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|131541|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e352e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.43.6.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.43.6.gz" bytes read 103659 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|103659|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e362e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.43.7.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.43.7.gz" bytes read 143604 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|143604|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e372e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.44.1.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.44.1.gz" bytes read 112457 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|112457|0|0|0|2f6c6f67732f6163636573732e6c6f672e34342e312e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.44.2.gz" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.44.2.gz" bytes read 121569 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|121569|0|0|0|2f6c6f67732f6163636573732e6c6f672e34342e322e677a|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/access.log.44.3" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/access.log.44.3" bytes read 2952146 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|2952146|0|0|0|2f6c6f67732f6163636573732e6c6f672e34342e33|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/info.php5" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/info.php5" bytes read 21 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|21|0|0|0|2f6c6f67732f696e666f2e70687035|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/info.pl" flags READ mode 0666
+Oct 28 12:34:16 10.71.57.0 u85761628 close "/logs/info.pl" bytes read 4176 written 0
+Oct 28 12:34:16 10.71.57.0 u85761628 [10.71.57.0|get|0|4176|0|0|0|2f6c6f67732f696e666f2e706c|]
+Oct 28 12:34:16 10.71.57.0 u85761628 open "/logs/info.py" flags READ mode 0666
+Oct 28 12:34:17 10.71.57.0 u85761628 close "/logs/info.py" bytes read 6384 written 0
+Oct 28 12:34:17 10.71.57.0 u85761628 [10.71.57.0|get|1|6384|0|0|0|2f6c6f67732f696e666f2e7079|]
+Oct 28 12:34:17 10.71.57.0 u85761628 open "/logs/last_traffic" flags READ mode 0666
+Oct 28 12:34:17 10.71.57.0 u85761628 close "/logs/last_traffic" bytes read 0 written 0
+Oct 28 12:34:17 10.71.57.0 u85761628 [10.71.57.0|get|0|0|0|0|0|2f6c6f67732f6c6173745f74726166666963|]
+Oct 28 12:34:17 10.71.57.0 u85761628 open "/logs/mail.log" flags READ mode 0666
+Oct 28 12:34:17 10.71.57.0 u85761628 close "/logs/mail.log" bytes read 434 written 0
+Oct 28 12:34:17 10.71.57.0 u85761628 [10.71.57.0|get|0|434|0|0|0|2f6c6f67732f6d61696c2e6c6f67|]
+Oct 28 12:34:17 10.71.57.0 u85761628 open "/logs/mail.log.36.gz" flags READ mode 0666
+Oct 28 12:34:17 10.71.57.0 u85761628 close "/logs/mail.log.36.gz" bytes read 300 written 0
+Oct 28 12:34:17 10.71.57.0 u85761628 [10.71.57.0|get|0|300|0|0|0|2f6c6f67732f6d61696c2e6c6f672e33362e677a|]
+Oct 28 12:34:17 10.71.57.0 u85761628 open "/logs/mail.log.37.gz" flags READ mode 0666
+Oct 28 12:34:17 10.71.57.0 u85761628 close "/logs/mail.log.37.gz" bytes read 293 written 0
+Oct 28 12:34:17 10.71.57.0 u85761628 [10.71.57.0|get|0|293|0|0|0|2f6c6f67732f6d61696c2e6c6f672e33372e677a|]
+Oct 28 12:34:17 10.71.57.0 u85761628 open "/logs/mail.log.41.gz" flags READ mode 0666
+Oct 28 12:34:17 10.71.57.0 u85761628 close "/logs/mail.log.41.gz" bytes read 305 written 0
+Oct 28 12:34:17 10.71.57.0 u85761628 [10.71.57.0|get|0|305|0|0|0|2f6c6f67732f6d61696c2e6c6f672e34312e677a|]
+Oct 28 12:34:17 10.71.57.0 u85761628 open "/logs/mail.log.43.gz" flags READ mode 0666
+Oct 28 12:34:17 10.71.57.0 u85761628 close "/logs/mail.log.43.gz" bytes read 819 written 0
+Oct 28 12:34:17 10.71.57.0 u85761628 [10.71.57.0|get|0|819|0|0|0|2f6c6f67732f6d61696c2e6c6f672e34332e677a|]
+Oct 28 12:34:17 10.71.57.0 u85761628 open "/logs/sftp.log" flags READ mode 0666
