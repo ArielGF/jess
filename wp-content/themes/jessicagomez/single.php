@@ -13,11 +13,7 @@
 
                     <?php
                         get_template_part('user-profile');
-                     ?>
-
-<?php get_template_part('components/portada/portada.php'); ?> 
-					 
-					
+                     ?>					
 					 
                     <?php
                     // If comments are open or we have at least one comment, load up the comment template

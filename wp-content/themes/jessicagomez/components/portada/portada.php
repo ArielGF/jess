@@ -1,1 +1,1 @@
-<div class="c-portada">caca</div>
+<div class="c-portada">portada</div>
