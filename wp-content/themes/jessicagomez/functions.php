@@ -99,7 +99,10 @@ function zinnias_lite_theme_scripts() {
 	wp_enqueue_style( 'google-font-playfair-display', '//fonts.googleapis.com/css?family=Playfair+Display:400,
     400italic,700,700italic,900,900italic', array(), null );
 
-	wp_enqueue_style('jessicagomez-styles', get_template_directory_uri() . '/css/styles.css');
+	// Ariel
+	wp_enqueue_style( 'google-font-montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', array
+	(), null );
+	wp_enqueue_style('jessicagomez-styles', get_template_directory_uri() . '/css/main.css');
 
 
 	// JS Files
