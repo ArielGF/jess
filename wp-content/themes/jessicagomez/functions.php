@@ -12,7 +12,6 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 */
 	function jessicagomez_theme_setup() {
-
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -213,6 +212,21 @@ endif;
 //////////////////////////////////////////////////////////////////
 // Woocommerce support
 //////////////////////////////////////////////////////////////////
+
+add_action('after_setup_theme', 'mostrar_template_actual_en_consola_header');
+function mostrar_template_actual_en_consola_header() {
+    // Obtener el archivo de la plantilla actual
+    $template_file = basename(get_page_template());
+
+    // Asegúrate de que el template se ha recuperado correctamente
+    if ($template_file) {
+        echo "<script>console.log('Current Template: " . esc_js($template_file) . "');</script>";
+    } else {
+        echo "<script>console.log('No se pudo obtener el archivo de la plantilla actual.');</script>";
+    }
+}
+
+
 
 add_action( 'after_setup_theme', 'zinnias_lite_woocommerce_support' );
 function zinnias_lite_woocommerce_support() {

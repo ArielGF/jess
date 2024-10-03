@@ -16,15 +16,11 @@
 			<div class="c-header__wrapper">
 				<div class="c-header__logo">
 					<?php if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ): ?>
-						<div class="text-center main-logo">
-							<?php the_custom_logo(); ?>
-						</div><!-- /Logo -->
+						<?php the_custom_logo(); ?>
 					<?php else: ?>
-						<div class="main-logo text-logo text-center">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
-
-							<p><?php echo esc_textarea( get_bloginfo( 'description' ) ); ?></p>
-						</div><!-- /Logo -->
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo - Jessica Gómez" />
+						</a>
 					<?php endif; ?>
 				</div>
 
@@ -51,7 +47,7 @@
 
 					<!-- main-logo section start-->
 					<div class="main-logo-section">
-
+logoo
 					<!-- #region LOGO -->
 						<?php if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ): ?>
 							<div class="text-center main-logo">
@@ -59,9 +55,9 @@
 							</div><!-- /Logo -->
 						<?php else: ?>
 							<div class="main-logo text-logo text-center">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
-
-								<p><?php echo esc_textarea( get_bloginfo( 'description' ) ); ?></p>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+									<img src="<?php get_template_directory_uri()?>/assets/images/logo.svg" alt="Logo - Jessica Gómez" />
+								</a>
 							</div><!-- /Logo -->
 						<?php endif; ?>
 						<!-- #endregion LOGO -->

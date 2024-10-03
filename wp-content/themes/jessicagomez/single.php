@@ -4,6 +4,7 @@
 
 <!-- main-content section start -->
 <div class="main-content">
+    single
     <div class="row">
         <div class="col-md-8">
 

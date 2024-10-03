@@ -1,43 +1,47 @@
-@use '../../css/base/variables.scss' as vars;
+@use "../../css/base/variables.scss" as vars;
 
 .c-header {
-    &__menu {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
+  &__logo {
+    max-height: 80px;
+  }
 
-        .menu-item  {
-            list-style: none;
-            padding: 15px;
-            position: relative;
-            
-            a {
-                color: vars.$color-titles;
-                text-transform: uppercase;
-            }
+  &__menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
-            .sub-menu {
-                backdrop-filter: blur(4px);
-                background-color: rgba(255, 255, 255, 0.5);
-                left: 0;
-                opacity: 0;
-                padding: 0;
-                pointer-events: none;
-                position: absolute;
-                top: 100%;
-                transition: opacity 300ms ease;
-                z-index: 10;
-            }
+    .menu-item {
+      list-style: none;
+      padding: 15px;
+      position: relative;
 
-            &.menu-item-has-children:hover .sub-menu {
-                opacity: 1;
-                pointer-events: all;
-            }
-        }
+      a {
+        color: vars.$color-titles;
+        text-transform: uppercase;
+      }
+
+      .sub-menu {
+        backdrop-filter: blur(4px);
+        background-color: rgba(255, 255, 255, 0.5);
+        left: 0;
+        opacity: 0;
+        padding: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        transition: opacity 300ms ease;
+        z-index: 10;
+      }
+
+      &.menu-item-has-children:hover .sub-menu {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
+  }
 
-    &__wrapper {
-        align-items: center;
-        display: flex;
-    }
+  &__wrapper {
+    align-items: center;
+    display: flex;
+  }
 }

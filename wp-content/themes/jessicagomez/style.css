@@ -387,11 +387,6 @@ pre{
     margin-left: 5px;
 }
 
-#category-menu{
-    border-top: 1px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
-}
-
 ul.cat-menu,
 .cat-menu ul{
     padding: 0;
