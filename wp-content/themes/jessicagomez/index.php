@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- main-content section start -->
-<?php include get_template_directory() . '/components/portada/portada.php'; ?> 
+index
 <div class="main-content">
     <div class="row">
         <div class="col-md-8">

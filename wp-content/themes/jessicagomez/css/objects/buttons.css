@@ -1,0 +1,41 @@
+.o-button--primary {
+  background-color: #7c4f94;
+  border-color: #7c4f94;
+  color: white;
+  align-items: center;
+  border-width: 1px;
+  border-radius: 5px;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.o-button--secondary {
+  background-color: #190026;
+  border-color: #190026;
+  color: white;
+  align-items: center;
+  border-width: 1px;
+  border-radius: 5px;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.o-button--outlined {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #7c4f94;
+  color: #7c4f94;
+  align-items: center;
+  border-width: 1px;
+  border-radius: 5px;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}

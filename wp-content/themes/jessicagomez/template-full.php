@@ -1,9 +1,8 @@
 <?php
 // Template Name: Full Width
  get_header(); ?>
-
     <!-- main-content section start -->
-    <?php include get_template_directory() . '/components/portada/portada.php'; ?> 
+    
 
     <div class="main-content">
 

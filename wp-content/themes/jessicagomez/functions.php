@@ -83,43 +83,14 @@ add_action( 'after_setup_theme', 'jessicagomez_theme_setup' );
 // Enqueue scripts and styles.
 //////////////////////////////////////////////////////////////////
 
-function zinnias_lite_theme_scripts() {
-	// CSS Files
-	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), null );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), null );
-	wp_enqueue_style( 'magnific-popup-css', get_template_directory_uri() . '/assets/css/magnific-popup.css', array(), null );
-	wp_enqueue_style( 'slicknav-css', get_template_directory_uri() . '/assets/css/slicknav.css', array(), null );
-	wp_enqueue_style( 'zinnias-lite-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'responsive-css', get_template_directory_uri() . '/assets/css/responsive.css', array(), null );
-
-	// Google Fonts
-	wp_enqueue_style( 'google-font-lora', '//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic', array
-	(), null );
-	wp_enqueue_style( 'google-font-playfair-display', '//fonts.googleapis.com/css?family=Playfair+Display:400,
-    400italic,700,700italic,900,900italic', array(), null );
-
+function jessicagomez_theme_scripts() {
 	// Ariel
 	wp_enqueue_style( 'google-font-montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', array
 	(), null );
-	wp_enqueue_style('jessicagomez-styles', get_template_directory_uri() . '/css/main.css');
-
-
-	// JS Files
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), null, true );
-	wp_enqueue_script( 'smoothscroll-js', get_template_directory_uri() . '/assets/js/smoothscroll.js', array( 'jquery' ), null, true );
-	wp_enqueue_script( 'fitvids-js', get_template_directory_uri() . '/assets/js/jquery.fitvids.js', array( 'jquery' ), null, true );
-	wp_enqueue_script( 'jquery-masonry', array( 'jquery' ), null, true );
-	wp_enqueue_script( 'magnific-popup-js', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array( 'jquery' ), null, true );
-	wp_enqueue_script( 'slicknav-js', get_template_directory_uri() . '/assets/js/jquery.slicknav.js', array( 'jquery' ), null, true );
-	wp_enqueue_script( 'zinnias-lite-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), null, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
 }
 
-add_action( 'wp_enqueue_scripts', 'zinnias_lite_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'jessicagomez_theme_scripts' );
 
 
 //////////////////////////////////////////////////////////////////

@@ -1,5 +1,14 @@
 * {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-@import 'base/containers.scss';
+body {
+  margin: 0;
+}
+
+@import "base/typography.scss";
+@import "base/containers.scss";
+
+@import "objects/buttons.scss";
+
+@import "../components/header/header.scss";

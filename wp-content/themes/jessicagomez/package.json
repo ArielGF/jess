@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass --watch components/**/*.scss:css/styles.css --no-source-map",
-    "build": "npm run build-css"
+    "build-components": "sass --watch components:components --no-source-map",
+    "build-css": "sass --watch css:css --no-source-map",
+    "build": "npm run build-components && npm run build-css"
   },
   "keywords": [],
   "author": "",

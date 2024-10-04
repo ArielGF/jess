@@ -1,0 +1,35 @@
+@use "../base/variables.scss" as vars;
+
+$buttons: (
+  "primary": (
+    "background-color": vars.$color-primary,
+    "border-color": vars.$color-primary,
+    "color": white,
+  ),
+  "secondary": (
+    "background-color": vars.$color-secondary,
+    "border-color": vars.$color-secondary,
+    "color": white,
+  ),
+  "outlined": (
+    "background-color": rgba(0, 0, 0, 0),
+    "border-color": vars.$color-primary,
+    "color": vars.$color-primary,
+  ),
+);
+
+@each $key, $value in $buttons {
+  .o-button--#{$key} {
+    @each $property, $property-value in $value {
+      #{$property}: $property-value;
+    }
+    align-items: center;
+    border-width: 1px;
+    border-radius: 5px;
+    display: inline-flex;
+    font-size: 16px;
+    justify-content: center;
+    padding: 10px 20px;
+    text-transform: uppercase;
+  }
+}

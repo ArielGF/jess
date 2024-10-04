@@ -1,6 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post' ); ?>>
 	<header class="entry-header text-center">
 		<div class="post-in text-uppercase"><?php echo get_the_category_list( ', ' ) ?></div>
+		content-single
 
 		<?php the_title( sprintf( '<h2 class="entry-title">' ), '</h2>' ); ?>
 	</header>

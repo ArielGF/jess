@@ -1,0 +1,47 @@
+$typography: (
+  "h1": (
+    "background-color": black,
+    "color": white,
+    "font-size": 65px,
+    "font-weight": bold,
+  ),
+  "h2": (
+    "font-size": 24px,
+    "font-weight": bold,
+    "text-transform": uppercase,
+  ),
+  "h3": (
+    "font-size": 24px,
+    "font-weight": normal,
+    "text-transform": uppercase,
+  ),
+  "h4": (
+    "font-size": 16px,
+    "font-weight": normal,
+    "text-transform": uppercase,
+  ),
+  "h5": (
+    "font-size": 14px,
+    "font-weight": bold,
+    "text-transform": uppercase,
+  ),
+  "body": (
+    "font-size": 16px,
+    "font-weight": normal,
+  ),
+  "small": (
+    "font-size": 14px,
+    "font-weight": normal,
+  ),
+);
+
+@each $key, $value in $typography {
+  .t-#{$key},
+  #{$key} {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    @each $property, $property-value in $value {
+      #{$property}: $property-value;
+    }
+  }
+}

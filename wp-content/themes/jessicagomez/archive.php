@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <!-- main-content section start -->
+ archive
 <div class="main-content">
 	<div class="row">
 		<div class="col-md-8">
