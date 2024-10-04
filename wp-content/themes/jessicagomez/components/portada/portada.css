@@ -64,6 +64,7 @@ small {
   background-color: white;
   min-height: 100vh;
   padding: 160px 0 30px;
+  position: relative;
 }
 .c-portada__description {
   background-color: rgba(255, 255, 255, 0.6);
@@ -71,6 +72,9 @@ small {
   padding: 10px;
 }
 .c-portada__image-1, .c-portada__image-2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   pointer-events: none;
   position: relative;
   overflow: hidden;
@@ -85,10 +89,27 @@ small {
   top: 0;
   width: 100%;
 }
+.c-portada__image-1 {
+  background-image: url("img/_DSC5049.webp");
+  height: 620px;
+  width: 460px;
+}
+.c-portada__image-2 {
+  background-image: url("img/_DSC3909.webp");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .c-portada__small::before {
   content: "";
   display: inline-block;
   width: 40px;
+}
+.c-portada__media-background {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 .c-portada__title-wrapper, .c-portada__content-wrapper {
   align-items: flex-start;

@@ -4,7 +4,7 @@
     <div class="o-container">
         <div class="c-portada__wrapper">
             <div class="c-portada__title-wrapper">
-                <span class="c-portada__small">Autora</span>
+                <span class="c-portada__small">Escritora</span>
                 <h1>| Jessica Gómez</h1>
             </div>
             
@@ -18,8 +18,8 @@
         </div>
 
         <div class="c-portada__media-background">
-            <img src="" class="c-portada__image-1" />
-            <img src="" class="c-portada__image-2" />
+            <div class="c-portada__image-1"></div>
+            <div class="c-portada__image-2"></div>
         </div>
     </div>
 </div>
