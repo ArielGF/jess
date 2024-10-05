@@ -6,7 +6,7 @@ $animation-duration: 300ms;
 .c-portada {
   background-color: white;
   min-height: 100vh;
-  padding: calc(vars.$header-height + 30px) 0 30px;
+  padding: vars.$header-height 0 30px;
   position: relative;
 
   &__description {
