@@ -2,6 +2,7 @@
 @use '../base/variables.scss' as vars;
 
 $breakpoints: (
+    'lg': vars.$breakpoint-lg,
     'md': vars.$breakpoint-md,
     'sm': vars.$breakpoint-sm
 );

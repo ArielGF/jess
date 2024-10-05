@@ -16,6 +16,10 @@ $animation-duration: 300ms;
     min-height: 50px;
   }
 
+  &__content-wrapper {
+    animation-delay: calc($animation-duration * 2);
+  }
+
   &__description {
     background-color: vars.$color-semitransparent;
     max-width: 450px;
@@ -89,6 +93,12 @@ $animation-duration: 300ms;
     top: 0;
     width: 100%;
 
+    @include mixins.BreakpointAndDown('md') {
+      .o-container--relative {
+        position: static;
+      }
+    }
+
     @include mixins.BreakpointAndDown('sm') {
       display: none;
     }
@@ -110,10 +120,10 @@ $animation-duration: 300ms;
     @include mixins.BreakpointAndDown('md') {
       padding: 15px 0;
     }
-  }
-
-  &__content-wrapper {
-    animation-delay: calc($animation-duration * 2);
+    
+    @include mixins.BreakpointAndDown('sm') {
+      align-items: stretch;
+    }
   }
 
   &__wrapper {

@@ -105,6 +105,11 @@ small {
   padding: 0 15px;
   width: calc(100% - 30px);
 }
+@media only screen and (max-width: 1440px) {
+  .o-container, .o-container--relative {
+    max-width: 1024px;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .o-container, .o-container--relative {
     max-width: 600px;
@@ -173,7 +178,6 @@ small {
 }
 @media only screen and (max-width: 1024px) {
   .c-header {
-    height: 100vh;
     position: fixed;
   }
 }
