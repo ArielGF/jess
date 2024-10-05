@@ -143,13 +143,12 @@ small {
     width: 100%;
   }
 }
-.c-header__hamburger-close, .c-header__hamburger-close {
-  height: 100%;
-  left: 0;
+.c-header__hamburger-close, .c-header__hamburger-open {
+  height: 32px;
+  margin: auto;
   position: absolute;
-  top: 0;
   transition: opacity 400ms ease, color 400ms ease;
-  width: 100%;
+  width: 32px;
 }
 .c-header__hamburger-close {
   color: white;
@@ -220,10 +219,13 @@ small {
   pointer-events: all;
 }
 .c-header__menu-hamburger {
+  background-color: white;
+  border-radius: 30px;
   cursor: pointer;
   display: none;
   height: 32px;
   left: 15px;
+  padding: 10px;
   position: absolute;
   top: 15px;
   width: 32px;
@@ -233,6 +235,9 @@ small {
   .c-header__menu-hamburger {
     display: inline-block;
   }
+}
+.opened .c-header__menu-hamburger {
+  background-color: rgba(0, 0, 0, 0);
 }
 .c-header__wrapper {
   align-items: center;

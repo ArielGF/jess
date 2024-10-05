@@ -14,13 +14,12 @@
     width: 100%;
   }
 
-  &__hamburger-close, &__hamburger-close {
-    height: 100%;
-    left: 0;
+  &__hamburger-close, &__hamburger-open {
+    height: 32px;
+    margin: auto;
     position: absolute;
-    top: 0;
     transition: opacity 400ms ease, color 400ms ease;
-    width: 100%;
+    width: 32px;
   }
 
   &__hamburger-close {
@@ -99,10 +98,13 @@
   }
 
   &__menu-hamburger {
+    background-color: white;
+    border-radius: 30px;
     cursor: pointer;
     display: none;
     height: 32px;
     left: 15px;
+    padding: 10px;
     position: absolute;
     top: 15px;
     width: 32px;
@@ -111,6 +113,10 @@
     @include mixins.BreakpoitAndDown('md') {
       display: inline-block;
       
+    }
+
+    .opened & {
+      background-color: rgba(0, 0, 0, 0);
     }
   }
 
