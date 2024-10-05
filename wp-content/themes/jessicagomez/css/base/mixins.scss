@@ -2,10 +2,11 @@
 @use '../base/variables.scss' as vars;
 
 $breakpoints: (
-    'md': vars.$breakpoint-md
+    'md': vars.$breakpoint-md,
+    'sm': vars.$breakpoint-sm
 );
 
-@mixin BreakpoitAndDown($breakpoint) {
+@mixin BreakpointAndDown($breakpoint) {
     @media only screen and (max-width: map.get($breakpoints, $breakpoint)) {
         @content;
     }

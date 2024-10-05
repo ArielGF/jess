@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use 'mixins.scss' as mixins;
+
 $typography: (
   "h1": (
     "background-color": black,
@@ -40,8 +43,17 @@ $typography: (
   #{$key} {
     font-family: "Montserrat", sans-serif;
     margin: 0;
+
     @each $property, $property-value in $value {
       #{$property}: $property-value;
     }
+
+    @if map.get(map.get($typography, $key), 'font-size') > 15px {
+      @include mixins.BreakpointAndDown('sm') {
+        $calculated-font-size: round(map.get($typography, $key, 'font-size') * 0.46);
+        font-size: if($calculated-font-size < 14px, 14px, $calculated-font-size) !important;
+      }
+    }
   }
 }
+

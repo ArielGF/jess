@@ -15,6 +15,12 @@ h1 {
   font-size: 65px;
   font-weight: bold;
 }
+@media only screen and (max-width: 600px) {
+  .t-h1,
+  h1 {
+    font-size: 30px !important;
+  }
+}
 
 .t-h2,
 h2 {
@@ -23,6 +29,12 @@ h2 {
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+  .t-h2,
+  h2 {
+    font-size: 14px !important;
+  }
 }
 
 .t-h3,
@@ -33,6 +45,12 @@ h3 {
   font-weight: normal;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 600px) {
+  .t-h3,
+  h3 {
+    font-size: 14px !important;
+  }
+}
 
 .t-h4,
 h4 {
@@ -41,6 +59,12 @@ h4 {
   font-size: 16px;
   font-weight: normal;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+  .t-h4,
+  h4 {
+    font-size: 14px !important;
+  }
 }
 
 .t-h5,
@@ -59,6 +83,12 @@ body {
   font-size: 16px;
   font-weight: normal;
 }
+@media only screen and (max-width: 600px) {
+  .t-body,
+  body {
+    font-size: 14px !important;
+  }
+}
 
 .t-small,
 small {
@@ -73,11 +103,16 @@ small {
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 15px;
-  width: 100%;
+  width: calc(100% - 30px);
 }
 @media only screen and (max-width: 1024px) {
   .o-container, .o-container--relative {
-    max-width: 800px;
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .o-container, .o-container--relative {
+    max-width: 580px;
   }
 }
 .o-container--relative {
@@ -140,7 +175,6 @@ small {
   .c-header {
     height: 100vh;
     position: fixed;
-    width: 100%;
   }
 }
 .c-header__hamburger-close, .c-header__hamburger-open {

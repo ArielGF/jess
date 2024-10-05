@@ -8,10 +8,9 @@
   width: 100%;
   z-index: 50;
 
-  @include mixins.BreakpoitAndDown('md') {
+  @include mixins.BreakpointAndDown('md') {
     height: 100vh;
     position: fixed;
-    width: 100%;
   }
 
   &__hamburger-close, &__hamburger-open {
@@ -41,7 +40,7 @@
 
   &__logo {
 
-    @include mixins.BreakpoitAndDown('md') { filter: brightness(10); }
+    @include mixins.BreakpointAndDown('md') { filter: brightness(10); }
     a img {
       max-height: 80px;
       width: 100%;
@@ -53,7 +52,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include mixins.BreakpoitAndDown('md') {
+    @include mixins.BreakpointAndDown('md') {
       flex-flow: column;
       justify-content: center;
       height: 100vh;
@@ -73,7 +72,7 @@
         text-transform: uppercase;
         position: relative;
 
-        @include mixins.BreakpoitAndDown('md') {
+        @include mixins.BreakpointAndDown('md') {
           color: white;
         }
 
@@ -92,7 +91,7 @@
           transition: max-width 400ms ease;
           width: 100%;
 
-          @include mixins.BreakpoitAndDown('md') { border-color: white; }
+          @include mixins.BreakpointAndDown('md') { border-color: white; }
         }
         &:hover::before {
           max-width: 200px;
@@ -132,7 +131,7 @@
     width: 32px;
     z-index: 51;
 
-    @include mixins.BreakpoitAndDown('md') {
+    @include mixins.BreakpointAndDown('md') {
       display: inline-block;
       
     }
@@ -147,7 +146,7 @@
     display: flex;
     min-height: vars.$header-height;
 
-    @include mixins.BreakpoitAndDown('md') {
+    @include mixins.BreakpointAndDown('md') {
       background: rgba(vars.$color-secondary, 0.8);
       flex-flow: column;
       height: 100vh;

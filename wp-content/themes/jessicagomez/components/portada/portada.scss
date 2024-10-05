@@ -1,3 +1,4 @@
+@use "../../css/base/mixins.scss" as mixins;
 @use "../../css/base/typography.scss" as typography;
 @use "../../css/base/variables.scss" as vars;
 
@@ -8,6 +9,12 @@ $animation-duration: 300ms;
   min-height: 100vh;
   padding: vars.$header-height 0 30px;
   position: relative;
+
+  @include mixins.BreakpointAndDown('md') {
+    background-color: rgba(vars.$color-primary, 0.5);
+    padding: 70px 0 30px;
+    min-height: 50px;
+  }
 
   &__description {
     background-color: vars.$color-semitransparent;
@@ -49,6 +56,10 @@ $animation-duration: 300ms;
     right: calc(275px + 60px);
     top: vars.$header-height;
     width: 460px;
+
+    @include mixins.BreakpointAndDown('md') {
+      display: none;
+    }
   }
 
   &__image-2 {
@@ -77,6 +88,10 @@ $animation-duration: 300ms;
     right: 0;
     top: 0;
     width: 100%;
+
+    @include mixins.BreakpointAndDown('sm') {
+      display: none;
+    }
   }
 
   &__title-wrapper,
@@ -91,7 +106,12 @@ $animation-duration: 300ms;
     flex-flow: column;
     opacity: 0;
     padding: 50px 0;
+
+    @include mixins.BreakpointAndDown('md') {
+      padding: 15px 0;
+    }
   }
+
   &__content-wrapper {
     animation-delay: calc($animation-duration * 2);
   }

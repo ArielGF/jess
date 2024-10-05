@@ -5,10 +5,14 @@
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 15px;
-  width: 100%;
+  width: calc(100% - 30px);
 
-  @include mixins.BreakpoitAndDown('md') {
-    max-width: 800px;
+  @include mixins.BreakpointAndDown('md') {
+    max-width: 600px;
+  }
+
+  @include mixins.BreakpointAndDown('sm') {
+    max-width: 580px;
   }
 
   &--relative {
