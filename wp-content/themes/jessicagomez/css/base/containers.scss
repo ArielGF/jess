@@ -4,4 +4,9 @@
   max-width: 1440px;
   padding: 0 15px;
   width: 100%;
+
+  &--relative {
+    @extend .o-container;
+    position: relative;
+  }
 }

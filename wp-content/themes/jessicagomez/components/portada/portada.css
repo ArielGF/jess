@@ -72,12 +72,16 @@ small {
   padding: 10px;
 }
 .c-portada__image-1, .c-portada__image-2 {
+  animation-name: fade-in;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
   position: relative;
   overflow: hidden;
+  opacity: 0;
 }
 .c-portada__image-1::before, .c-portada__image-2::before {
   background-color: rgba(124, 79, 148, 0.6);
@@ -90,15 +94,25 @@ small {
   width: 100%;
 }
 .c-portada__image-1 {
+  animation-delay: 900ms;
   background-image: url("img/_DSC5049.webp");
+  border-top-left-radius: 165px;
   height: 620px;
+  margin-left: auto;
+  right: 335px;
+  top: 130px;
   width: 460px;
 }
 .c-portada__image-2 {
+  animation-delay: 1200ms;
   background-image: url("img/_DSC3909.webp");
+  border-bottom-right-radius: 50px;
+  height: 515px;
+  margin-left: auto;
   position: absolute;
   right: 0;
   top: 0;
+  width: 275px;
 }
 .c-portada__small::before {
   content: "";
@@ -113,15 +127,33 @@ small {
 }
 .c-portada__title-wrapper, .c-portada__content-wrapper {
   align-items: flex-start;
+  animation-name: fade-in;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-flow: column;
+  opacity: 0;
   padding: 50px 0;
+}
+.c-portada__content-wrapper {
+  animation-delay: 600ms;
 }
 .c-portada__wrapper {
   align-items: flex-start;
   display: flex;
   justify-content: space-around;
   flex-flow: column;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

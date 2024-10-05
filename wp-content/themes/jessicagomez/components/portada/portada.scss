@@ -1,6 +1,8 @@
 @use "../../css/base/typography.scss" as typography;
 @use "../../css/base/variables.scss" as vars;
 
+$animation-duration: 300ms;
+
 .c-portada {
   background-color: white;
   min-height: 100vh;
@@ -15,12 +17,16 @@
 
   &__image-1,
   &__image-2 {
+    animation-name: fade-in;
+    animation-duration: $animation-duration;
+    animation-fill-mode: forwards;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     pointer-events: none;
     position: relative;
     overflow: hidden;
+    opacity: 0;
 
     &::before {
       background-color: rgba(vars.$color-primary, 0.6);
@@ -35,16 +41,26 @@
   }
 
   &__image-1 {
+    animation-delay: calc($animation-duration * 3);
     background-image: url("img/_DSC5049.webp");
+    border-top-left-radius: 165px;
     height: 620px;
+    margin-left: auto;
+    right: calc(275px + 60px);
+    top: vars.$header-height;
     width: 460px;
   }
 
   &__image-2 {
+    animation-delay: calc($animation-duration * 4);
     background-image: url("img/_DSC3909.webp");
+    border-bottom-right-radius: 50px;
+    height: 515px;
+    margin-left: auto;
     position: absolute;
     right: 0;
     top: 0;
+    width: 275px;
   }
 
   &__small {
@@ -66,11 +82,18 @@
   &__title-wrapper,
   &__content-wrapper {
     align-items: flex-start;
+    animation-name: fade-in;
+    animation-duration: $animation-duration;
+    animation-fill-mode: forwards;
     display: flex;
     gap: 10px;
     justify-content: center;
     flex-flow: column;
+    opacity: 0;
     padding: 50px 0;
+  }
+  &__content-wrapper {
+    animation-delay: calc($animation-duration * 2);
   }
 
   &__wrapper {
@@ -78,5 +101,12 @@
     display: flex;
     justify-content: space-around;
     flex-flow: column;
+    position: relative;
+    z-index: 1;
   }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

@@ -18,8 +18,10 @@
         </div>
 
         <div class="c-portada__media-background">
-            <div class="c-portada__image-1"></div>
-            <div class="c-portada__image-2"></div>
+            <div class="o-container--relative">
+                <div class="c-portada__image-1"></div>
+                <div class="c-portada__image-2"></div>
+            </div>
         </div>
     </div>
 </div>
