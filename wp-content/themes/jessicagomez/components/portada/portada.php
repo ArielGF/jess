@@ -1,11 +1,9 @@
-<?php wp_enqueue_style('portada', get_template_directory_uri() . '/components/portada/portada.css');?>
-
 <div class="c-portada">
     <div class="o-container">
         <div class="c-portada__wrapper">
             <div class="c-portada__title-wrapper">
                 <span class="c-portada__small">Escritora</span>
-                <h1>| Jessica Gómez</h1>
+                <h1 class="c-portada__title">| Jessica Gómez</h1>
             </div>
             
             <div class="c-portada__content-wrapper">

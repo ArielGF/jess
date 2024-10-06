@@ -1,5 +1,4 @@
 @use "../../css/base/mixins.scss" as mixins;
-@use "../../css/base/typography.scss" as typography;
 @use "../../css/base/variables.scss" as vars;
 
 $animation-duration: 300ms;
@@ -53,7 +52,7 @@ $animation-duration: 300ms;
 
   &__image-1 {
     animation-delay: calc($animation-duration * 3);
-    background-image: url("img/_DSC5049.webp");
+    background-image: url("../components/portada/img/_DSC5049.webp");
     border-top-left-radius: 165px;
     height: 620px;
     margin-left: auto;
@@ -68,7 +67,7 @@ $animation-duration: 300ms;
 
   &__image-2 {
     animation-delay: calc($animation-duration * 4);
-    background-image: url("img/_DSC3909.webp");
+    background-image: url("../components/portada/img/_DSC3909.webp");
     border-bottom-right-radius: 50px;
     height: 515px;
     margin-left: auto;
@@ -76,15 +75,6 @@ $animation-duration: 300ms;
     right: 0;
     top: 0;
     width: 275px;
-  }
-
-  &__small {
-    @extend .t-h4 !optional;
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 40px;
-    }
   }
 
   &__media-background {
@@ -104,6 +94,20 @@ $animation-duration: 300ms;
     }
   }
 
+  &__small {
+    @extend .t-h4 !optional;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 40px;
+    }
+  }
+
+  &__title {
+    @extend .t-h1 !optional;
+    background-color: black,
+  }
+  
   &__title-wrapper,
   &__content-wrapper {
     align-items: flex-start;
@@ -140,3 +144,5 @@ $animation-duration: 300ms;
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+

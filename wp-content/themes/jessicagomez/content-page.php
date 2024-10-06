@@ -20,8 +20,6 @@
 		?>
 	</div>
 
-	<footer class="entry-footer">
-		<?php wp_footer(); ?>
-	</footer>
+	<?php wp_footer(); ?>
 
 </article>

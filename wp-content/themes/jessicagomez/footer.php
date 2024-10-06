@@ -1,5 +1,3 @@
-<?php wp_enqueue_style('footer', get_template_directory_uri() . '/components/footer/footer.css');?>
-
 <div class="c-footer">
 	<div class="o-container">
 		<div class="c-footer__wrapper">
