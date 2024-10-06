@@ -1,21 +1,22 @@
 @use '../../css/base/typography.scss' as typography;
 @use '../../css/base/variables.scss' as vars;
+@use '../../css/objects/buttons.scss' as buttons;
 
 .c-footer {
     background-color: vars.$color-secondary;
     text-align: center;
-
-    a {
-        @extend .t-small !optional;
-        color: white;
-        text-decoration: none;
-    }
 
     hr {
         background-color: rgba(white, 0.6); 
         border: 0;
         height: 0.5px;
         width: 100%;
+    }
+
+    &__copyright a, &__links a {
+        @extend .o-link !optional;
+        @extend .t-small !optional;
+        color: white;
     }
 
     &__copyright {

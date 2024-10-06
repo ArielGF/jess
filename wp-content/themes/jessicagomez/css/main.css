@@ -169,6 +169,101 @@ small {
   text-transform: uppercase;
 }
 
+.o-link, .c-header__menu .menu-item a {
+  position: relative;
+  text-decoration: none;
+}
+.o-link::before, .c-header__menu .menu-item a::before {
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 1px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  margin: 0 auto;
+  max-width: 0px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: max-width 400ms ease;
+  width: 100%;
+}
+.o-link:hover::before, .c-header__menu .menu-item a:hover::before {
+  max-width: 200px;
+}
+
+.o-button--primary {
+  background-color: #7c4f94;
+  border-color: #7c4f94;
+  color: white;
+  align-items: center;
+  border-width: 1px;
+  border-radius: 5px;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.o-button--secondary {
+  background-color: #190026;
+  border-color: #190026;
+  color: white;
+  align-items: center;
+  border-width: 1px;
+  border-radius: 5px;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.o-button--outlined {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #7c4f94;
+  color: #7c4f94;
+  align-items: center;
+  border-width: 1px;
+  border-radius: 5px;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.o-link, .c-header__menu .menu-item a {
+  position: relative;
+  text-decoration: none;
+}
+
+.o-link::before, .c-header__menu .menu-item a::before {
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 1px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  margin: 0 auto;
+  max-width: 0px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: max-width 400ms ease;
+  width: 100%;
+}
+
+.o-link:hover::before, .c-header__menu .menu-item a:hover::before {
+  max-width: 200px;
+}
+
 .c-header {
   left: 0;
   position: absolute;
@@ -232,9 +327,7 @@ small {
 }
 .c-header__menu .menu-item a {
   color: #000;
-  text-decoration: none;
   text-transform: uppercase;
-  position: relative;
 }
 @media only screen and (max-width: 1024px) {
   .c-header__menu .menu-item a {
@@ -242,27 +335,12 @@ small {
   }
 }
 .c-header__menu .menu-item a::before {
-  border-bottom: 1px solid black;
   color: inherit;
-  content: "";
-  display: block;
-  height: 1px;
-  left: 0;
-  margin: 0 auto;
-  max-width: 0px;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  transition: max-width 400ms ease;
-  width: 100%;
 }
 @media only screen and (max-width: 1024px) {
   .c-header__menu .menu-item a::before {
     border-color: white;
   }
-}
-.c-header__menu .menu-item a:hover::before {
-  max-width: 200px;
 }
 .c-header__menu .menu-item .sub-menu {
   backdrop-filter: blur(4px);
