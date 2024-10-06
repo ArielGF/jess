@@ -32,8 +32,11 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 
 		// Register nav menu.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'zinnias_lite' ),
+			'primary' => __( 'Primary Menu', 'jessicagomez' ),
+			'rrss' => __( 'Redes sociales', 'jessicagomez' ),
+			'footer' => __( 'Footer', 'jessicagomez' ),
 		) );
+		
 
 
 		/*

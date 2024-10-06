@@ -21,8 +21,7 @@
 	</div>
 
 	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'zinnias_lite' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php wp_footer(); ?>
 	</footer>
-	<!-- .entry-footer -->
 
 </article>
