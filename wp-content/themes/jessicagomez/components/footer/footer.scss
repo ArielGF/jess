@@ -1,6 +1,7 @@
+@use '../../css/objects/buttons.scss' as buttons;
+@use '../../css/base/mixins.scss' as mixins;
 @use '../../css/base/typography.scss' as typography;
 @use '../../css/base/variables.scss' as vars;
-@use '../../css/objects/buttons.scss' as buttons;
 
 .c-footer {
     background-color: vars.$color-secondary;
@@ -29,17 +30,32 @@
         gap: 24px;
         justify-content: center;
         padding: 0;
+
+        @include mixins.BreakpointAndDown('sm') {
+            align-items: center;
+            flex-flow: column;
+            gap: 10px;
+            margin: 0;
+        }
     }
 
     &__rrss {
         display: flex;
         gap: 24px;
         justify-content: center;
+
+        @include mixins.BreakpointAndDown('sm') {
+            flex-wrap: wrap;
+        }
     }
 
     &__title {
         color: white;
         font-size: 40px;
+
+        @include mixins.BreakpointAndDown('sm') {
+            font-size: 32px;
+        }
     }
 
     &__wrapper {
@@ -47,5 +63,9 @@
         flex-flow: column;
         gap: 24px;
         padding: 30px 0;
+
+        @include mixins.BreakpointAndDown('sm') {
+            padding: 30px 0 15px;
+        }
     }
 }
