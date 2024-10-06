@@ -1,6 +1,6 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post' ); ?>>
+<article id="post-<?php the_ID(); ?>"  class="c-post">
 	<header class="entry-header text-center">
-
+content-post
 		<div class="post-in text-uppercase"><?php echo get_the_category_list( ', ' ) ?></div>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>

@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post' ); ?>>
 	<?php if(is_front_page()) { include get_template_directory() . '/components/portada/portada.php'; } ?>
 	
-	<?php the_title( sprintf( '<h2 class="entry-title text-uppercase">' ), '</h2>' ); ?>
+	<h2><?php the_title() ?></h2>
 	
 
 	<?php if ( has_post_thumbnail() ) : ?>
