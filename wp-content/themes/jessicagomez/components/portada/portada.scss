@@ -9,7 +9,7 @@ $animation-duration: 300ms;
   padding: vars.$header-height 0 30px;
   position: relative;
 
-  @include mixins.BreakpointAndDown('md') {
+  @include mixins.BreakpointAndDown("md") {
     background-color: rgba(vars.$color-primary, 0.5);
     padding: 70px 0 30px;
     min-height: 50px;
@@ -60,7 +60,7 @@ $animation-duration: 300ms;
     top: vars.$header-height;
     width: 460px;
 
-    @include mixins.BreakpointAndDown('md') {
+    @include mixins.BreakpointAndDown("md") {
       display: none;
     }
   }
@@ -83,13 +83,13 @@ $animation-duration: 300ms;
     top: 0;
     width: 100%;
 
-    @include mixins.BreakpointAndDown('md') {
+    @include mixins.BreakpointAndDown("md") {
       .o-container--relative {
         position: static;
       }
     }
 
-    @include mixins.BreakpointAndDown('sm') {
+    @include mixins.BreakpointAndDown("sm") {
       display: none;
     }
   }
@@ -105,9 +105,9 @@ $animation-duration: 300ms;
 
   &__title {
     @extend .t-h1 !optional;
-    background-color: black,
+    background-color: black;
   }
-  
+
   &__title-wrapper,
   &__content-wrapper {
     align-items: flex-start;
@@ -121,11 +121,11 @@ $animation-duration: 300ms;
     opacity: 0;
     padding: 50px 0;
 
-    @include mixins.BreakpointAndDown('md') {
+    @include mixins.BreakpointAndDown("md") {
       padding: 15px 0;
     }
 
-    @include mixins.BreakpointAndDown('sm') {
+    @include mixins.BreakpointAndDown("sm") {
       align-items: stretch;
     }
   }
@@ -141,8 +141,10 @@ $animation-duration: 300ms;
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-

@@ -1,17 +1,12 @@
 <?php get_header(); ?>
 
-<!-- main-content section start -->
-<div class="main-content text-center">
-	<div class="row">
-		<div class="col-md-12 error-page">
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<h3 class="text-uppercase"><?php _e( 'Oops, This Page Could Not Be Found!', 'zinnias_lite' ) ?></h3>
-
-				<h2><?php _e( '404', 'zinnias_lite' ) ?></h2>
-			</article>
-		</div>
+<div class="p-404">
+	<div class="o-container">
+		<article id="post-<?php the_ID(); ?>" class="p-404__wrapper">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/404.svg" class="p-404__image" />
+			<h2><?php _e( '¡Vaya! Parece que la página que buscas no existe', 'jessicagomez' ) ?></h2>
+		</article>
 	</div>
 </div>
-<!-- main-content section end -->
 
 <?php get_footer(); ?>

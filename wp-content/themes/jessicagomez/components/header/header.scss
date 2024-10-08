@@ -1,5 +1,5 @@
-@use '../../css/objects/buttons.scss' as buttons;
-@use '../../css/base/mixins.scss' as mixins;
+@use "../../css/objects/buttons.scss" as buttons;
+@use "../../css/base/mixins.scss" as mixins;
 @use "../../css/base/variables.scss" as vars;
 
 .c-header {
@@ -9,11 +9,12 @@
   width: 100%;
   z-index: 50;
 
-  @include mixins.BreakpointAndDown('md') {
+  @include mixins.BreakpointAndDown("md") {
     position: fixed;
   }
 
-  &__hamburger-close, &__hamburger-open {
+  &__hamburger-close,
+  &__hamburger-open {
     height: 32px;
     margin: auto;
     position: absolute;
@@ -39,8 +40,9 @@
   }
 
   &__logo {
-
-    @include mixins.BreakpointAndDown('md') { filter: brightness(10); }
+    @include mixins.BreakpointAndDown("md") {
+      filter: brightness(10);
+    }
     a img {
       max-height: 80px;
       width: 100%;
@@ -52,7 +54,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include mixins.BreakpointAndDown('md') {
+    @include mixins.BreakpointAndDown("md") {
       flex-flow: column;
       justify-content: center;
       height: 100vh;
@@ -71,21 +73,24 @@
         color: vars.$color-titles;
         text-transform: uppercase;
 
-        @include mixins.BreakpointAndDown('md') {
+        @include mixins.BreakpointAndDown("md") {
           color: white;
         }
 
         &::before {
           color: inherit;
 
-          @include mixins.BreakpointAndDown('md') { border-color: white; }
+          @include mixins.BreakpointAndDown("md") {
+            border-color: white;
+          }
         }
-        
       }
 
       .sub-menu {
         backdrop-filter: blur(4px);
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        border-top-left-radius: 0;
         left: 0;
         opacity: 0;
         padding: 0;
@@ -94,6 +99,9 @@
         top: 100%;
         transition: opacity 300ms ease;
         z-index: 10;
+        a {
+          color: white;
+        }
       }
 
       &.menu-item-has-children:hover .sub-menu {
@@ -116,9 +124,8 @@
     width: 32px;
     z-index: 51;
 
-    @include mixins.BreakpointAndDown('md') {
+    @include mixins.BreakpointAndDown("md") {
       display: inline-block;
-      
     }
 
     .opened & {
@@ -131,7 +138,7 @@
     display: flex;
     min-height: vars.$header-height;
 
-    @include mixins.BreakpointAndDown('md') {
+    @include mixins.BreakpointAndDown("md") {
       background: rgba(vars.$color-secondary, 0.8);
       flex-flow: column;
       height: 100vh;
