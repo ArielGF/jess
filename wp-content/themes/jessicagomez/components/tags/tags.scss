@@ -1,0 +1,19 @@
+.c-tags {
+  &__wrapper {
+    display: flex;
+    flex-flow: wrap;
+    gap: 12px;
+
+    a {
+      @extend .o-button--outlined !optional;
+      font-size: 14px;
+      gap: 10px;
+      padding: 6px 10px !important;
+
+      &::before {
+        content: "#";
+        display: block;
+      }
+    }
+  }
+}

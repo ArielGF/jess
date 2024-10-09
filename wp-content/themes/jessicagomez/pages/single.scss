@@ -1,0 +1,13 @@
+@use "../css/base/variables.scss" as vars;
+
+.p-single {
+  &__header {
+    padding: #{vars.$header-height * 2} 0 vars.$header-height;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 80% 20%;
+  }
+}

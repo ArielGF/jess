@@ -14,7 +14,7 @@ $buttons: (
     "color": white,
   ),
   "outlined": (
-    "background-color": vars.$color-primary,
+    "background-color": vars.$color-semitransparent,
     "border-color": vars.$color-primary,
     "color": vars.$color-primary,
   ),
@@ -52,7 +52,7 @@ a {
   position: relative;
   text-decoration: none;
 
-  &::before {
+  &::after {
     border-style: solid;
     border-width: 0;
     border-bottom-width: 1px;
@@ -68,7 +68,7 @@ a {
     transition: max-width 400ms ease;
     width: 100%;
   }
-  &:hover::before {
+  &:hover::after {
     max-width: 200px;
   }
 }

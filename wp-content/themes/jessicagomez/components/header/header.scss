@@ -49,7 +49,7 @@
         width: 100%;
       }
 
-      &:hover::before {
+      &:hover::after {
         content: none;
       }
     }
@@ -83,7 +83,7 @@
           color: white;
         }
 
-        &::before {
+        &::after {
           color: inherit;
 
           @include mixins.BreakpointAndDown("md") {

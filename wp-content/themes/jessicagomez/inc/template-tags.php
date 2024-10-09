@@ -36,7 +36,7 @@ if ( ! function_exists( 'jessicagomez_post_tag_list' ) ) {
 	function jessicagomez_post_tag_list() {
 		$tags_list = get_the_tag_list( '', ' ' );
 		if ( $tags_list ) {
-			printf( '<div class="tags pull-left"><span class="tags-links">' . '%1$s' . '</span></div>', $tags_list );
+			printf( '<div class="c-tags"><div class="c-tags__wrapper">' . '%1$s' . '</div></div>', $tags_list );
 		}
 
 	}
@@ -62,7 +62,7 @@ if ( ! function_exists( 'jessicagomez_archive_title' ) ) :
 
 	function jessicagomez_archive_title( $before = '', $after = '' ) {
 		if ( is_category() ) {
-			$title = sprintf( __( 'Categoría de <span class="archive-name">%s</span>', 'jessicagomez' ), single_cat_title( '', false ) );
+			$title = sprintf( __( '<span class="archive-name">%s</span>', 'jessicagomez' ), single_cat_title( '', false ) );
 		} elseif ( is_tag() ) {
 			$title = sprintf( __( 'Etiquetado como <span class="archive-name">%s</span>', 'jessicagomez' ), single_tag_title( '', false ) );
 		} elseif ( is_author() ) {
