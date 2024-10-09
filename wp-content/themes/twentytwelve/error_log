@@ -1,4 +1,0 @@
-[05-Jul-2022 22:44:09 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/jessica2/public_html/jessicagomezautora.com/wp-content/themes/twentytwelve/author.php:14
-Stack trace:
-#0 {main}
-  thrown in /home2/jessica2/public_html/jessicagomezautora.com/wp-content/themes/twentytwelve/author.php on line 14
