@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
-				<div class="archive-title"><?php printf( __( 'Search Results by <span class="archive-name">%s</span>', 'zinnias_lite' ),  get_search_query() ); ?></div>
+				<div class="archive-title"><?php printf( __( 'Search Results by <span class="archive-name">%s</span>', 'jessicagomez' ),  get_search_query() ); ?></div>
 			</div>
 		</div>
 	</div>
@@ -21,7 +21,7 @@
 
 				endwhile;
 
-				zinnias_lite_posts_navigation();
+				jessicagomez_posts_navigation();
 
 			} else {
 

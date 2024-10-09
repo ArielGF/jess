@@ -1,30 +1,26 @@
 <?php get_header(); ?>
 
-<!-- main-content section start -->
-index
-<div class="main-content">
-    <div class="row">
-        <div class="col-md-8">
-            <?php if ( have_posts() ) {
-                while (have_posts()) : the_post();
 
-                    get_template_part('content', 'post');
-
-                endwhile;
-
-                zinnias_lite_posts_navigation();
-
-            } else {
-
-                get_template_part('content', 'none');
-
-            } ?>
-        </div>
-
-        <?php get_sidebar(); ?>
-
+<div class="p-blog">
+    <div class="p-blog-header">
+        <?php echo the_content(); ?>
     </div>
+    
+    <div class="p-posts">
+        <?php if ( have_posts() ) {
+            while (have_posts()) : the_post();
+                get_template_part('content', 'post');
+            endwhile;
+
+            jessicagomez_posts_navigation();
+
+        } else {
+
+            get_template_part('content', 'none');
+
+        } ?>
+    </div>
+    <?php get_sidebar(); ?>
 </div>
-<!-- main-content section end -->
 
 <?php get_footer(); ?>

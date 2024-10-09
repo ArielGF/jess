@@ -10,11 +10,13 @@
 		</div>
 	<?php endif; ?>
 
-	<div class="entry-content">
+	<div class="entry-content"> content-page
+		content starts
 		<?php the_content(); ?>
+		content ends
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'zinnias_lite' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'jessicagomez' ),
 			'after'  => '</div>',
 		) );
 		?>

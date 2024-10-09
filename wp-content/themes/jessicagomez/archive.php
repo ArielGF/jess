@@ -8,7 +8,7 @@
 
 			<div class="archive-header text-center">
 				<?php
-				zinnias_lite_archive_title( '<div class="archive-title">', '</div>' );
+				jessicagomez_archive_title( '<div class="archive-title">', '</div>' );
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</div>
@@ -21,7 +21,7 @@
 
 				endwhile;
 
-				zinnias_lite_posts_navigation();
+				jessicagomez_posts_navigation();
 
 			} else {
 

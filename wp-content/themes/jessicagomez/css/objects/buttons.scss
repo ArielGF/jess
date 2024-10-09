@@ -1,3 +1,5 @@
+@use "sass:color";
+@use "sass:map";
 @use "../base/variables.scss" as vars;
 
 $buttons: (
@@ -12,7 +14,7 @@ $buttons: (
     "color": white,
   ),
   "outlined": (
-    "background-color": rgba(0, 0, 0, 0),
+    "background-color": vars.$color-primary,
     "border-color": vars.$color-primary,
     "color": vars.$color-primary,
   ),
@@ -29,9 +31,16 @@ $buttons: (
     display: inline-flex;
     font-size: 16px;
     justify-content: center;
+    overflow: hidden;
     padding: 10px 20px;
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
+    transition: background-color 300ms ease;
+
+    &:hover {
+      background-color: color.adjust(map.get($value, "background-color"), $lightness: -10%);
+    }
   }
 }
 
@@ -43,7 +52,7 @@ $buttons: (
     border-style: solid;
     border-width: 0;
     border-bottom-width: 1px;
-    content: '';
+    content: "";
     display: block;
     height: 1px;
     left: 0;

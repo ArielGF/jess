@@ -16,7 +16,7 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 */
-		load_theme_textdomain( 'zinnias_lite', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'jessicagomez', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -70,7 +70,7 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'zinnias_lite_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'jessicagomez_custom_background_args', array(
 			'default-color' => 'f8f8f8',
 			'default-image' => '',
 		) ) );
@@ -78,7 +78,7 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 		add_theme_support( 'custom-logo' );
 
 	}
-endif; // zinnias_lite_theme_setup
+endif; // jessicagomez_theme_setup
 add_action( 'after_setup_theme', 'jessicagomez_theme_setup' );
 
 
@@ -99,9 +99,9 @@ add_action( 'wp_enqueue_scripts', 'jessicagomez_theme_scripts', 1 );
 //////////////////////////////////////////////////////////////////
 // Widget register.
 //////////////////////////////////////////////////////////////////
-function zinnias_lite_widgets_init() {
+function jessicagomez_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Blog Sidebar', 'zinnias_lite' ),
+		'name'          => __( 'Blog Sidebar', 'jessicagomez' ),
 		'id'            => 'zinnias-blog-sidebar',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -112,16 +112,16 @@ function zinnias_lite_widgets_init() {
 
 }
 
-add_action( 'widgets_init', 'zinnias_lite_widgets_init' );
+add_action( 'widgets_init', 'jessicagomez_widgets_init' );
 
 
 //////////////////////////////////////////////////////////////////
 // Comment
 //////////////////////////////////////////////////////////////////
 
-if ( ! function_exists( 'zinnias_lite_comment' ) ):
+if ( ! function_exists( 'jessicagomez_comment' ) ):
 
-	function zinnias_lite_comment( $comment, $args, $depth ) {
+	function jessicagomez_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) :
 			case 'pingback' :
@@ -129,7 +129,7 @@ if ( ! function_exists( 'zinnias_lite_comment' ) ):
 				// Display trackbacks differently than normal comments.
 				?>
 				<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-				<p>Pingback: <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'zinnias_lite' ),
+				<p>Pingback: <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'jessicagomez' ),
 						'<span class="edit-link">', '</span>' ); ?></p>
 				<?php
 				break;
@@ -141,7 +141,7 @@ if ( ! function_exists( 'zinnias_lite_comment' ) ):
 				<div id="comment-<?php comment_ID(); ?>" class="comment-body media">
                     <span class="comment-reply">
 							<?php comment_reply_link( array_merge( $args, array(
-								'reply_text' => __( 'Reply', 'zinnias_lite' ),
+								'reply_text' => __( 'Reply', 'jessicagomez' ),
 								'after'      => '',
 								'depth'      => $depth,
 								'max_depth'  => $args['max_depth']
@@ -163,14 +163,14 @@ if ( ! function_exists( 'zinnias_lite_comment' ) ):
 						</div>
 
 						<?php if ( '0' == $comment->comment_approved ) : ?>
-							<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'zinnias_lite' ); ?></p>
+							<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'jessicagomez' ); ?></p>
 						<?php endif; ?>
 
 						<div class="comment-content">
 							<?php comment_text(); ?>
 						</div>
 
-						<?php edit_comment_link( __( 'Edit', 'zinnias_lite' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_comment_link( __( 'Edit', 'jessicagomez' ), '<span class="edit-link">', '</span>' ); ?>
 
 					</div>
 
@@ -187,23 +187,8 @@ endif;
 // Woocommerce support
 //////////////////////////////////////////////////////////////////
 
-add_action('after_setup_theme', 'mostrar_template_actual_en_consola_header');
-function mostrar_template_actual_en_consola_header() {
-    // Obtener el archivo de la plantilla actual
-    $template_file = basename(get_page_template());
-
-    // Asegúrate de que el template se ha recuperado correctamente
-    if ($template_file) {
-        echo "<script>console.log('Current Template: " . esc_js($template_file) . "');</script>";
-    } else {
-        echo "<script>console.log('No se pudo obtener el archivo de la plantilla actual.');</script>";
-    }
-}
-
-
-
-add_action( 'after_setup_theme', 'zinnias_lite_woocommerce_support' );
-function zinnias_lite_woocommerce_support() {
+add_action( 'after_setup_theme', 'jessicagomez_woocommerce_support' );
+function jessicagomez_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 
@@ -222,10 +207,5 @@ include( 'inc/customizer/customizer_settings.php' );
 
 	
 remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
-
-
-
-
-
 
 

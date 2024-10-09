@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass --watch css/main.scss:css/main.css --no-source-map --quiet"
+    "build": "sass css/main.scss:css/main.css --no-source-map --quiet"
   },
   "keywords": [],
   "author": "",

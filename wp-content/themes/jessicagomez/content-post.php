@@ -14,7 +14,7 @@ content-post
 		<?php if ( $images ) : ?>
 			<div class="post-thumb">
 				<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
-					<sup class="featured-post" title="<?php _e( 'Sticky Post', 'zinnias_lite' ) ?>"><i
+					<sup class="featured-post" title="<?php _e( 'Sticky Post', 'jessicagomez' ) ?>"><i
 							class="fa fa-thumb-tack"></i></sup>
 				<?php } ?>
 				<div id="blog-gallery-slider" class="carousel slide" data-ride="carousel">
@@ -53,12 +53,12 @@ content-post
 					<div class="overlay-meta-data pull-left">
 
 						<span
-							class="home-author"><?php _e( 'Escrito por ', 'zinnias_lite' ); ?><?php the_author_posts_link(); ?></span>
+							class="home-author"><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?></span>
 
-						| <span class="home-on"><?php _e( 'El ', 'zinnias_lite' ) ?><?php the_time( 'd/F/Y' ); ?></span>
+						| <span class="home-on"><?php _e( 'El ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?></span>
 
-						| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'zinnias_lite' ) .
-						                         '</span>', __( '1 Comentario', 'zinnias_lite' ), __( '% Comentarios', 'zinnias_lite' ) ); ?>
+						| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
+						                         '</span>', __( '1 Comentario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
 					</div>
 				</div>
 
@@ -70,7 +70,7 @@ content-post
 
 		<div class="post-thumb">
 			<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
-				<sup class="featured-post" title="<?php _e( 'Sticky Post', 'zinnias_lite' ) ?>"><i
+				<sup class="featured-post" title="<?php _e( 'Sticky Post', 'jessicagomez' ) ?>"><i
 						class="fa fa-thumb-tack"></i></sup>
 			<?php } ?>
 			<div class="entry-video">
@@ -85,12 +85,12 @@ content-post
 			<div class="meta-overlay">
 				<div class="overlay-meta-data pull-left">
 					<span
-						class="home-author"><?php _e( 'Escrito por ', 'zinnias_lite' ); ?><?php the_author_posts_link(); ?></span>
+						class="home-author"><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?></span>
 
-					| <span class="home-on"><?php _e( 'El ', 'zinnias_lite' ) ?><?php the_time( 'd/F/Y' ); ?></span>
+					| <span class="home-on"><?php _e( 'El ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?></span>
 
-					| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'zinnias_lite' ) .
-					                         '</span>', __( '1 Comentario', 'zinnias_lite' ), __( '% Comentarios', 'zinnias_lite' ) ); ?>
+					| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
+					                         '</span>', __( '1 Comentario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
 				</div>
 			</div>
 
@@ -101,7 +101,7 @@ content-post
 
 		<div class="post-thumb">
 			<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
-				<sup class="featured-post" title="<?php _e( 'Sticky Post', 'zinnias_lite' ) ?>"><i
+				<sup class="featured-post" title="<?php _e( 'Sticky Post', 'jessicagomez' ) ?>"><i
 						class="fa fa-thumb-tack"></i></sup>
 			<?php } ?>
 			<div class="entry-audio">
@@ -117,12 +117,12 @@ content-post
 			<div class="meta-overlay">
 				<div class="overlay-meta-data pull-left">
 					<span
-						class="home-author"><?php _e( 'Escrito por', 'zinnias_lite' ); ?><?php the_author_posts_link(); ?></span>
+						class="home-author"><?php _e( 'Escrito por', 'jessicagomez' ); ?><?php the_author_posts_link(); ?></span>
 
-					| <span class="home-on"><?php _e( 'El  ', 'zinnias_lite' ) ?><?php the_time( 'd/F/Y' ); ?></span>
+					| <span class="home-on"><?php _e( 'El  ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?></span>
 
-					| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'zinnias_lite' ) .
-					                         '</span>', __( '1 Comentario', 'zinnias_lite' ), __( '% Comentarios', 'zinnias_lite' ) ); ?>
+					| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
+					                         '</span>', __( '1 Comentario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
 
 				</div>
 			</div>
@@ -134,23 +134,23 @@ content-post
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="post-thumb">
 				<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
-					<sup class="featured-post" title="<?php _e( 'Sticky Post', 'zinnias_lite' ) ?>"><i
+					<sup class="featured-post" title="<?php _e( 'Sticky Post', 'jessicagomez' ) ?>"><i
 							class="fa fa-thumb-tack"></i></sup>
 				<?php } ?>
 				<a href="<?php the_permalink(); ?>"
 				   title="<?php the_title(); ?>"><?php the_post_thumbnail( 'zinnias-post-thumbnail', array( 'class' => 'img-responsive' ) ); ?></a>
-				<?php zinnias_lite_the_caption(); ?>
+				<?php jessicagomez_the_caption(); ?>
 
 
 				<div class="meta-overlay">
 					<div class="overlay-meta-data pull-left">
 						<span
-							class="home-author"><?php _e( 'Escrito por ', 'zinnias_lite' ); ?><?php the_author_posts_link(); ?></span>
+							class="home-author"><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?></span>
 
-						| <span class="home-on"><?php _e( 'El ', 'zinnias_lite' ) ?><?php the_time( 'd/F/Y' ); ?></span>
+						| <span class="home-on"><?php _e( 'El ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?></span>
 
-						| <?php comments_number( '<span class="home-comment">' . __( '0 Comment', 'zinnias_lite' ) .
-						                         '</span>', __( '1 Cometario', 'zinnias_lite' ), __( '% Comentarios', 'zinnias_lite' ) ); ?>
+						| <?php comments_number( '<span class="home-comment">' . __( '0 Comment', 'jessicagomez' ) .
+						                         '</span>', __( '1 Cometario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
 					</div>
 				</div>
 
@@ -160,7 +160,7 @@ content-post
 	<?php endif; ?>
 
 	<div class="entry-content">
-		<?php the_content( __( '<span class="text-uppercase">Leer artículo completo</span>', 'zinnias_lite' ) ); ?>
+		<?php the_content( __( '<span class="text-uppercase">Leer artículo completo</span>', 'jessicagomez' ) ); ?>
 
 	</div>
 </article>

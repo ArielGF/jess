@@ -133,9 +133,15 @@ small {
   display: inline-flex;
   font-size: 16px;
   justify-content: center;
+  overflow: hidden;
   padding: 10px 20px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 300ms ease;
+}
+.o-button--primary:hover {
+  background-color: rgb(96.140969163, 61.2511013216, 114.7488986784);
 }
 
 .o-button--secondary {
@@ -148,13 +154,19 @@ small {
   display: inline-flex;
   font-size: 16px;
   justify-content: center;
+  overflow: hidden;
   padding: 10px 20px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 300ms ease;
+}
+.o-button--secondary:hover {
+  background-color: hsl(279.4736842105, 100%, -2.5490196078%);
 }
 
 .o-button--outlined {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #7c4f94;
   border-color: #7c4f94;
   color: #7c4f94;
   align-items: center;
@@ -163,9 +175,15 @@ small {
   display: inline-flex;
   font-size: 16px;
   justify-content: center;
+  overflow: hidden;
   padding: 10px 20px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 300ms ease;
+}
+.o-button--outlined:hover {
+  background-color: rgb(96.140969163, 61.2511013216, 114.7488986784);
 }
 
 .o-link, .c-header__menu .menu-item a, .c-footer__copyright a, .c-footer__links a {
@@ -263,9 +281,16 @@ small {
   display: inline-flex;
   font-size: 16px;
   justify-content: center;
+  overflow: hidden;
   padding: 10px 20px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 300ms ease;
+}
+
+.o-button--primary:hover {
+  background-color: rgb(96.140969163, 61.2511013216, 114.7488986784);
 }
 
 .o-button--secondary {
@@ -278,13 +303,20 @@ small {
   display: inline-flex;
   font-size: 16px;
   justify-content: center;
+  overflow: hidden;
   padding: 10px 20px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 300ms ease;
+}
+
+.o-button--secondary:hover {
+  background-color: hsl(279.4736842105, 100%, -2.5490196078%);
 }
 
 .o-button--outlined {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #7c4f94;
   border-color: #7c4f94;
   color: #7c4f94;
   align-items: center;
@@ -293,9 +325,16 @@ small {
   display: inline-flex;
   font-size: 16px;
   justify-content: center;
+  overflow: hidden;
   padding: 10px 20px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 300ms ease;
+}
+
+.o-button--outlined:hover {
+  background-color: rgb(96.140969163, 61.2511013216, 114.7488986784);
 }
 
 .o-link, .c-footer__copyright a, .c-footer__links a, .c-header__menu .menu-item a {

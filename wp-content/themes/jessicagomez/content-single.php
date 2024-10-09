@@ -41,12 +41,12 @@
 				<div class="meta-overlay">
 					<div class="overlay-meta-data pull-left">
 						<span
-							class="home-author"><?php _e( 'Escrito por ', 'zinnias_lite' ); ?><?php the_author_posts_link(); ?></span>
+							class="home-author"><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?></span>
 
-						| <span class="home-on"><?php _e( 'El ', 'zinnias_lite' ) ?><?php the_time( 'd/F/Y' ); ?></span>
+						| <span class="home-on"><?php _e( 'El ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?></span>
 
-						| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'zinnias_lite' ) .
-						                         '</span>', __( '1 Cometario', 'zinnias_lite' ), __( '% Comentarios', 'zinnias_lite' ) ); ?>
+						| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
+						                         '</span>', __( '1 Cometario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
 
 					</div>
 				</div>
@@ -70,12 +70,12 @@
 			<div class="meta-overlay">
 				<div class="overlay-meta-data pull-left">
 					<span
-						class="home-author"><?php _e( 'Escrito por ', 'zinnias_lite' ); ?><?php the_author_posts_link(); ?></span>
+						class="home-author"><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?></span>
 
-					| <span class="home-on"><?php _e( 'El ', 'zinnias_lite' ) ?><?php the_time( 'd/F/Y' ); ?></span>
+					| <span class="home-on"><?php _e( 'El ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?></span>
 
-					| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'zinnias_lite' ) .
-					                         '</span>', __( '1 Comentario', 'zinnias_lite' ), __( '% Comentarios', 'zinnias_lite' ) ); ?>
+					| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
+					                         '</span>', __( '1 Comentario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
 
 				</div>
 			</div>
@@ -99,12 +99,12 @@
 			<div class="meta-overlay">
 				<div class="overlay-meta-data pull-left">
 					<span
-						class="home-author"><?php _e( 'Escrito por ', 'zinnias_lite' ); ?><?php the_author_posts_link(); ?></span>
+						class="home-author"><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?></span>
 
-					| <span class="home-on"><?php _e( 'El ', 'zinnias_lite' ) ?><?php the_time( 'd/F/Y' ); ?></span>
+					| <span class="home-on"><?php _e( 'El ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?></span>
 
-					| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'zinnias_lite' ) .
-					                         '</span>', __( '1 COmentario', 'zinnias_lite' ), __( '% Comentarios', 'zinnias_lite' ) ); ?>
+					| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
+					                         '</span>', __( '1 COmentario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
 				</div>
 			</div>
 
@@ -119,12 +119,12 @@
 				<div class="meta-overlay">
 					<div class="overlay-meta-data pull-left">
 						<span
-							class="home-author"><?php _e( 'Escrito por ', 'zinnias_lite' ); ?><?php the_author_posts_link(); ?></span>
+							class="home-author"><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?></span>
 
-						| <span class="home-on"><?php _e( 'El ', 'zinnias_lite' ) ?><?php the_time( 'd/F/Y' ); ?></span>
+						| <span class="home-on"><?php _e( 'El ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?></span>
 
-						| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'zinnias_lite' ) .
-						                         '</span>', __( '1 Comentario', 'zinnias_lite' ), __( '% Comentarios', 'zinnias_lite' ) ); ?>
+						| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
+						                         '</span>', __( '1 Comentario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
 
 					</div>
 				</div>
@@ -141,7 +141,7 @@
 	<div class="single-post-meta text-uppercase">
 
 		<?php
-		zinnias_lite_post_tag_list();
+		jessicagomez_post_tag_list();
 		?>
 	</div>
 	<!-- /.social share -->

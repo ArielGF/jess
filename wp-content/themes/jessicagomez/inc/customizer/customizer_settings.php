@@ -3,11 +3,11 @@
 //////////////////////////////////////////////////////////////////
 // Customizer - Add Settings
 //////////////////////////////////////////////////////////////////
-function zinnias_lite_register_theme_customizer( $wp_customize ) {
+function jessicagomez_register_theme_customizer( $wp_customize ) {
 
 	// Add Sections
-	$wp_customize->add_section( 'zinnias_lite_new_section_footer', array(
-		'title'    => __( 'Footer', 'zinnias_lite' ),
+	$wp_customize->add_section( 'jessicagomez_new_section_footer', array(
+		'title'    => __( 'Footer', 'jessicagomez' ),
 		'priority' => 103,
 	) );
 
@@ -30,10 +30,10 @@ function zinnias_lite_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'zinnias_lite_footer_copyright',
+			'jessicagomez_footer_copyright',
 			array(
-				'label'    => __( 'Footer Copyright Text', 'zinnias_lite' ),
-				'section'  => 'zinnias_lite_new_section_footer',
+				'label'    => __( 'Footer Copyright Text', 'jessicagomez' ),
+				'section'  => 'jessicagomez_new_section_footer',
 				'settings' => 'copy_right_text',
 				'type'     => 'textarea',
 				'priority' => 1
@@ -44,5 +44,5 @@ function zinnias_lite_register_theme_customizer( $wp_customize ) {
 
 }
 
-add_action( 'customize_register', 'zinnias_lite_register_theme_customizer' );
+add_action( 'customize_register', 'jessicagomez_register_theme_customizer' );
 ?>
