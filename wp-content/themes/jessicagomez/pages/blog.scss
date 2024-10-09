@@ -1,0 +1,32 @@
+@use "../css/base/variables.scss" as vars;
+@use "../css/base/functions.scss" as functions;
+@use "../css/base/mixins.scss" as mixins;
+
+.p-blog {
+  &__header {
+    padding: #{vars.$header-height * 2} 0 vars.$header-height;
+  }
+
+  &__header-wrapper {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__posts-wrapper {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 40px;
+
+    @include mixins.BreakpointAndDown("md") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mixins.BreakpointAndDown("sm") {
+      display: block;
+    }
+  }
+}

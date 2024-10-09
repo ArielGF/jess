@@ -1,7 +1,5 @@
 <section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'No hay publicaciones', 'jessicagomez' ); ?></h1>
-	</header>
+		<h2 class="page-title"><?php _e( 'No hay publicaciones', 'jessicagomez' ); ?></h2>
 	<!-- .page-header -->
 
 	<div class="page-content">
@@ -13,12 +11,11 @@
 		<?php elseif ( is_search() ) : ?>
 
 			<p><?php _e( 'Parece que no podemos encontrar lo que estas buscando. Tal vez, continuar buscando pueda ayudar.', 'jessicagomez' ); ?></p>
-			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
 			<p><?php _e( 'Parece que no podemos encontrar lo que estas buscando. Tal vez, continuar buscando pueda ayudar.', 'jessicagomez' ); ?></p>
-			<?php get_search_form(); ?>
+			
 
 		<?php endif; ?>
 	</div>

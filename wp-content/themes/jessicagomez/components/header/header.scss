@@ -43,9 +43,15 @@
     @include mixins.BreakpointAndDown("md") {
       filter: brightness(10);
     }
-    a img {
-      max-height: 80px;
-      width: 100%;
+    a {
+      img {
+        max-height: 80px;
+        width: 100%;
+      }
+
+      &:hover::before {
+        content: none;
+      }
     }
   }
 

@@ -26,8 +26,11 @@ $buttons: (
       #{$property}: $property-value;
     }
     align-items: center;
+    appearance: none;
     border-width: 1px;
     border-radius: 5px;
+    border-style: solid;
+    cursor: pointer;
     display: inline-flex;
     font-size: 16px;
     justify-content: center;
@@ -44,7 +47,8 @@ $buttons: (
   }
 }
 
-.o-link {
+.o-link,
+a {
   position: relative;
   text-decoration: none;
 

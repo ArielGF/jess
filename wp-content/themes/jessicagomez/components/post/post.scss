@@ -1,4 +1,43 @@
-@use '../../css/base/variables.scss' as vars;
+@use "../../css/base/variables.scss" as vars;
 .c-post {
-    background-color: vars.$color-background-1;
+  background-color: vars.$color-background-1;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 15px;
+  text-align: center;
+
+  &__caption {
+    display: -webkit-box; /* Habilita el modelo de caja flexible */
+    -webkit-box-orient: vertical; /* Establece la orientación del contenedor en vertical */
+    -webkit-line-clamp: 5; /* Número máximo de líneas que deseas mostrar */
+    overflow: hidden; /* Oculta el contenido desbordante */
+    height: auto; /* Deja que la altura sea automática */
+    max-height: 150px; /* Establece la altura máxima para limitar el número de líneas */
+    width: 100%; /* Ancho del contenedor */
+    text-overflow: ellipsis;
+  }
+
+  &__category a {
+    @extend .t-h4 !optional;
+    color: vars.$color-secondary;
+  }
+
+  &__image {
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 30px;
+    height: 200px;
+    width: 100%;
+  }
+
+  &__title {
+    @extend .t-h4 !optional;
+    font-weight: bold;
+  }
 }

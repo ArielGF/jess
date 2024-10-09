@@ -1,14 +1,14 @@
-@use 'sass:map';
-@use '../base/variables.scss' as vars;
+@use "sass:map";
+@use "../base/variables.scss" as vars;
 
 $breakpoints: (
-    'lg': vars.$breakpoint-lg,
-    'md': vars.$breakpoint-md,
-    'sm': vars.$breakpoint-sm
+  "lg": vars.$breakpoint-lg,
+  "md": vars.$breakpoint-md,
+  "sm": vars.$breakpoint-sm,
 );
 
 @mixin BreakpointAndDown($breakpoint) {
-    @media only screen and (max-width: map.get($breakpoints, $breakpoint)) {
-        @content;
-    }
+  @media only screen and (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
 }

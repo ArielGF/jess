@@ -1,0 +1,5 @@
+@function colsToGrid($cols) {
+  /* Transforma en porcentaje el número de columnas que le pasemos */
+  $percentaje: ($cols * 100%) / 12;
+  @return $percentaje;
+}
