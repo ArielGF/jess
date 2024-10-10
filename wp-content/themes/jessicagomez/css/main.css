@@ -410,13 +410,14 @@ a:hover::after {
 .c-header, .c-header--front-page {
   background-color: #190026;
   left: 0;
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 50;
 }
 .c-header--front-page {
-  background-color: rgba(0, 0, 0, 0) !important;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
 }
 @media only screen and (max-width: 1024px) {
   .c-header, .c-header--front-page {
@@ -484,7 +485,7 @@ a:hover::after {
 }
 @media only screen and (max-width: 1024px) {
   .c-header__menu .menu-item a {
-    color: white;
+    color: white !important;
   }
 }
 .c-header__menu .menu-item a::after {
