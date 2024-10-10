@@ -102,12 +102,12 @@ add_action( 'wp_enqueue_scripts', 'jessicagomez_theme_scripts', 1 );
 function jessicagomez_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Blog Sidebar', 'jessicagomez' ),
-		'id'            => 'zinnias-blog-sidebar',
+		'id'            => 'jessicagomez-blog-sidebar',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="c-sidebar__wrapper %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title text-uppercase text-center">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="c-sidebar__title">',
+		'after_title'   => '</h3>',
 	) );
 
 }

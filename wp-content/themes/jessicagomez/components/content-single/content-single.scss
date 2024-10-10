@@ -1,0 +1,26 @@
+@use "../../css/base/variables.scss" as vars;
+
+.c-content-single {
+    &__categories {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+
+        a {
+            @extend .t-small !optional;
+            padding: 10px 5px;
+            text-transform: uppercase;
+
+            &::after {
+                 content: none;
+            }
+        }
+    }
+
+    &__image {
+        border-radius: 5px;
+        display: flex;
+        margin-bottom: 8px;
+        overflow: hidden;
+    }
+}

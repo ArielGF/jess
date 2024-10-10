@@ -2,12 +2,20 @@
 @use "../../css/base/mixins.scss" as mixins;
 @use "../../css/base/variables.scss" as vars;
 
+$front-page: '.c-header--front-page';
+
 .c-header {
+  background-color: vars.$color-secondary;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 50;
+
+  &--front-page {
+    @extend .c-header;
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
 
   @include mixins.BreakpointAndDown("md") {
     position: fixed;
@@ -76,8 +84,12 @@
 
       a {
         @extend .o-link !optional;
-        color: vars.$color-titles;
+        color: white;
         text-transform: uppercase;
+
+        #{$front-page} & {
+          color: vars.$color-titles;
+        }
 
         @include mixins.BreakpointAndDown("md") {
           color: white;

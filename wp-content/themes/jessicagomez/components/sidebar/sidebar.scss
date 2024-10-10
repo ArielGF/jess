@@ -1,0 +1,61 @@
+@use '../../css/base/mixins.scss';
+@use '../../css/base/variables.scss' as vars;
+
+$sidebar: '.c-sidebar';
+
+#{$sidebar} {
+    &__wrapper:not(.widget_search) {
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
+        margin-bottom: 20px;
+
+        #{$sidebar}__title {
+            @extend .t-h5 !optional;
+            background-color: vars.$color-secondary;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            color: white;
+            font-weight: bold !important;
+            padding: 10px 25px;
+
+            & + ul {
+                background-color: vars.$color-background-1;
+                border-radius: 5px;
+                border-top-left-radius: 0;
+                display: flex;
+                flex-flow: column;
+                gap: 10px;
+                justify-content: flex-start;
+                list-style: none;
+                margin: 0;
+                padding: 10px;
+                
+                li {
+                    background-color: white;
+                    border-radius: 5px;
+                    display: flex;
+                    transition: box-shadow 300ms ease;
+
+                    &:hover {
+                        box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+                    }
+
+                    a {
+                        @extend .t-small !optional;
+                        color: black;
+                        padding: 10px 15px;
+
+                        &::after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mixins.BreakpointAndDown('md') {
+        display: none;
+    }
+}

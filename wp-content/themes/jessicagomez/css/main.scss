@@ -11,11 +11,13 @@ body {
 
 @import "objects/buttons.scss";
 
+@import "../components/content-single/content-single.scss";
 @import "../components/footer/footer.scss";
 @import "../components/header/header.scss";
 @import "../components/portada/portada.scss";
 @import "../components/post/post.scss";
 @import "../components/search-form/search-form.scss";
+@import "../components/sidebar/sidebar.scss";
 @import "../components/tags/tags.scss";
 
 @import "../pages/404.scss";
