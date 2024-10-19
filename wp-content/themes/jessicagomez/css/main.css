@@ -941,7 +941,8 @@ a:hover::after {
   margin-bottom: 40px !important;
   padding: 30px;
 }
-.ccf-form-wrapper .ccf-form .o-input-wrapper label.main-label {
+.ccf-form-wrapper .ccf-form .o-input-wrapper label.main-label,
+.ccf-form-wrapper .ccf-form .o-input-wrapper--dual label.main-label {
   background-color: #190026;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -951,8 +952,24 @@ a:hover::after {
   padding: 8px 16px;
 }
 .ccf-form-wrapper .ccf-form .o-input-wrapper label.main-label + input[type=text],
-.ccf-form-wrapper .ccf-form .o-input-wrapper label.main-label + textarea {
+.ccf-form-wrapper .ccf-form .o-input-wrapper label.main-label + textarea,
+.ccf-form-wrapper .ccf-form .o-input-wrapper--dual label.main-label + input[type=text],
+.ccf-form-wrapper .ccf-form .o-input-wrapper--dual label.main-label + textarea {
   border-top-left-radius: 0 !important;
+}
+.ccf-form-wrapper .ccf-form .o-input-wrapper--dual label.main-label {
+  float: left;
+}
+.ccf-form-wrapper .ccf-form .o-input-wrapper--dual label.main-label + div > input {
+  border-top-left-radius: 0 !important;
+}
+@media only screen and (max-width: 600px) {
+  .ccf-form-wrapper .ccf-form .o-input-wrapper--dual label.main-label ~ div {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
 }
 .ccf-form-wrapper .ccf-form .checkbox label {
   display: flex;

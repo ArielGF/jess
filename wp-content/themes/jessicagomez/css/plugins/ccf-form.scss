@@ -1,3 +1,4 @@
+@use "../base/mixins.scss" as mixins;
 @use "../base/variables.scss" as vars;
 
 .ccf-form-wrapper {
@@ -12,7 +13,8 @@
       @extend .o-input !optional;
     }
 
-    .o-input-wrapper label.main-label {
+    .o-input-wrapper label.main-label,
+    .o-input-wrapper--dual label.main-label {
       background-color: vars.$color-secondary;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
@@ -23,6 +25,22 @@
       + input[type="text"],
       + textarea {
         border-top-left-radius: 0 !important;
+      }
+    }
+    .o-input-wrapper--dual label.main-label {
+      float: left;
+      + div {
+        > input {
+          border-top-left-radius: 0 !important;
+        }
+      }
+      ~ div {
+        @include mixins.BreakpointAndDown("sm") {
+          display: block;
+          padding-left: 0;
+          padding-right: 0;
+          width: 100%;
+        }
       }
     }
 
