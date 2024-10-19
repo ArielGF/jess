@@ -35,6 +35,7 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 			'primary' => __( 'Primary Menu', 'jessicagomez' ),
 			'rrss' => __( 'Redes sociales', 'jessicagomez' ),
 			'footer' => __( 'Footer', 'jessicagomez' ),
+			'destacados' => __( 'Artículos destacados', 'jessicagomez' ),
 		) );
 		
 
@@ -102,7 +103,8 @@ function jessicagomez_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Blog Sidebar', 'jessicagomez' ),
 		'id'            => 'jessicagomez-blog-sidebar',
-		'description'   => '',
+		'description'   => 'Aparecerá a la derecha del contenido de los posts',
+		'class'			=> 'c-sidebar',
 		'before_widget' => '<aside id="%1$s" class="c-sidebar__wrapper %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="c-sidebar__title">',

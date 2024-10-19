@@ -817,7 +817,6 @@ a:hover::after {
   align-items: flex-start;
   display: flex;
   flex-flow: column;
-  margin-bottom: 20px;
 }
 .c-sidebar__wrapper:not(.widget_search) .c-sidebar__title {
   background-color: #190026;
@@ -825,6 +824,7 @@ a:hover::after {
   border-top-right-radius: 20px;
   color: white;
   font-weight: bold !important;
+  margin-bottom: 0;
   padding: 10px 25px;
 }
 .c-sidebar__wrapper:not(.widget_search) .c-sidebar__title + ul {
@@ -836,7 +836,8 @@ a:hover::after {
   gap: 10px;
   justify-content: flex-start;
   list-style: none;
-  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
   padding: 10px;
 }
 .c-sidebar__wrapper:not(.widget_search) .c-sidebar__title + ul li {
