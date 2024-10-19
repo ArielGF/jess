@@ -1,0 +1,106 @@
+@use "../base/variables.scss" as vars;
+
+.ccf-form-wrapper {
+  background-color: vars.$color-background-1;
+  border-radius: 5px;
+  margin-bottom: 40px !important;
+  padding: 30px;
+
+  .ccf-form {
+    input[type="text"],
+    textarea {
+      @extend .o-input !optional;
+    }
+
+    .o-input-wrapper label.main-label {
+      background-color: vars.$color-secondary;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      color: white;
+      display: inline-flex !important;
+      margin-bottom: 0 !important;
+      padding: 8px 16px;
+      + input[type="text"],
+      + textarea {
+        border-top-left-radius: 0 !important;
+      }
+    }
+
+    .checkbox {
+      label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          left: 0;
+          top: 0;
+          margin-right: 10px;
+          background-color: #f0f0f0;
+          border-radius: 4px;
+          transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        input[type="checkbox"] {
+          left: 0;
+          top: 0;
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+          cursor: pointer;
+
+          &:checked + span {
+            &::before {
+              background-color: vars.$color-secondary;
+              border-color: vars.$color-secondary;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              left: 7px;
+              top: 2px;
+              width: 5px;
+              height: 10px;
+              border: solid white;
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+              display: block;
+            }
+          }
+        }
+
+        span {
+          padding-left: 35px;
+          position: absolute;
+
+          &::before {
+            content: "";
+            background-color: #f0f0f0;
+            border-color: #ccc;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s, border-color 0.3s;
+          }
+        }
+      }
+    }
+
+    .form-submit {
+      text-align: center;
+      input[type="submit"] {
+        @extend .o-button--primary !optional;
+        background-image: none;
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@ body {
 @import "base/containers.scss";
 
 @import "objects/buttons.scss";
+@import "objects/inputs.scss";
 
 @import "../components/author-link/author-link.scss";
 @import "../components/content-single/content-single.scss";
@@ -25,3 +26,5 @@ body {
 @import "../pages/404.scss";
 @import "../pages/blog.scss";
 @import "../pages/single.scss";
+
+@import "plugins/ccf-form.scss";

@@ -124,7 +124,7 @@ small {
   position: relative;
 }
 
-.o-button--primary {
+.o-button--primary, .ccf-form-wrapper .ccf-form .form-submit input[type=submit] {
   background-color: #7c4f94;
   border-color: #7c4f94;
   color: white;
@@ -145,7 +145,7 @@ small {
   text-transform: uppercase;
   transition: background-color 300ms ease;
 }
-.o-button--primary:hover {
+.o-button--primary:hover, .ccf-form-wrapper .ccf-form .form-submit input[type=submit]:hover {
   background-color: rgb(96.140969163, 61.2511013216, 114.7488986784);
 }
 
@@ -224,6 +224,28 @@ a::after {
 .o-link:hover::after, .c-header__menu .menu-item a:hover::after,
 a:hover::after {
   max-width: 200px;
+}
+
+.o-input, .ccf-form-wrapper .ccf-form input[type=text],
+.ccf-form-wrapper .ccf-form textarea,
+.o-input-wrapper .o-input,
+.o-input-wrapper .ccf-form-wrapper .ccf-form textarea,
+.ccf-form-wrapper .ccf-form .o-input-wrapper textarea {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  padding: 10px 20px !important;
+  transition: all 300ms ease !important;
+}
+.o-input:focus, .ccf-form-wrapper .ccf-form input[type=text]:focus,
+.ccf-form-wrapper .ccf-form textarea:focus, .o-input:focus-visible, .ccf-form-wrapper .ccf-form input[type=text]:focus-visible,
+.ccf-form-wrapper .ccf-form textarea:focus-visible, .o-input:active, .ccf-form-wrapper .ccf-form input[type=text]:active,
+.ccf-form-wrapper .ccf-form textarea:active,
+.o-input-wrapper .o-input:focus,
+.o-input-wrapper .o-input:focus-visible,
+.o-input-wrapper .o-input:active {
+  border: 1px solid #7c4f94;
+  outline: none;
 }
 
 .c-author-link {
@@ -309,7 +331,7 @@ a:hover::after {
   }
 }
 
-.o-button--primary {
+.o-button--primary, .ccf-form-wrapper .ccf-form .form-submit input[type=submit] {
   background-color: #7c4f94;
   border-color: #7c4f94;
   color: white;
@@ -331,7 +353,7 @@ a:hover::after {
   transition: background-color 300ms ease;
 }
 
-.o-button--primary:hover {
+.o-button--primary:hover, .ccf-form-wrapper .ccf-form .form-submit input[type=submit]:hover {
   background-color: rgb(96.140969163, 61.2511013216, 114.7488986784);
 }
 
@@ -911,4 +933,89 @@ a:hover::after {
   .p-single__wrapper {
     display: block;
   }
+}
+
+.ccf-form-wrapper {
+  background-color: #cfc0d7;
+  border-radius: 5px;
+  margin-bottom: 40px !important;
+  padding: 30px;
+}
+.ccf-form-wrapper .ccf-form .o-input-wrapper label.main-label {
+  background-color: #190026;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  display: inline-flex !important;
+  margin-bottom: 0 !important;
+  padding: 8px 16px;
+}
+.ccf-form-wrapper .ccf-form .o-input-wrapper label.main-label + input[type=text],
+.ccf-form-wrapper .ccf-form .o-input-wrapper label.main-label + textarea {
+  border-top-left-radius: 0 !important;
+}
+.ccf-form-wrapper .ccf-form .checkbox label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.ccf-form-wrapper .ccf-form .checkbox label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  margin-right: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.ccf-form-wrapper .ccf-form .checkbox label input[type=checkbox] {
+  left: 0;
+  top: 0;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+.ccf-form-wrapper .ccf-form .checkbox label input[type=checkbox]:checked + span::before {
+  background-color: #190026;
+  border-color: #190026;
+}
+.ccf-form-wrapper .ccf-form .checkbox label input[type=checkbox]:checked + span::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+}
+.ccf-form-wrapper .ccf-form .checkbox label span {
+  padding-left: 35px;
+  position: absolute;
+}
+.ccf-form-wrapper .ccf-form .checkbox label span::before {
+  content: "";
+  background-color: #f0f0f0;
+  border-color: #ccc;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.ccf-form-wrapper .ccf-form .form-submit {
+  text-align: center;
+}
+.ccf-form-wrapper .ccf-form .form-submit input[type=submit] {
+  background-image: none;
 }
