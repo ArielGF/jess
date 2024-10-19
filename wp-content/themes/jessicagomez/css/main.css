@@ -743,6 +743,35 @@ a:hover::after {
   font-weight: bold;
 }
 
+.c-rrss-links {
+  padding: 24px 0;
+}
+.c-rrss-links__link, .c-rrss-links__link--whatsapp, .c-rrss-links__link--copy, .c-rrss-links__link--facebook, .c-rrss-links__link--twitter {
+  background-size: cover;
+  cursor: pointer;
+  display: block;
+  height: 32px;
+  text-decoration: none;
+  width: 32px;
+}
+.c-rrss-links__link--twitter {
+  background-image: url("../components/rrss-links/img/Twitter.svg");
+}
+.c-rrss-links__link--facebook {
+  background-image: url("../components/rrss-links/img/Facebook.svg");
+}
+.c-rrss-links__link--copy {
+  background-image: url("../components/rrss-links/img/Copy.svg");
+}
+.c-rrss-links__link--whatsapp {
+  background-image: url("../components/rrss-links/img/Whatsapp.svg");
+}
+.c-rrss-links__wrapper {
+  display: flex;
+  gap: 24px;
+  padding: 12px 0;
+}
+
 .c-search-form {
   display: flex;
   gap: 5px;
@@ -842,7 +871,7 @@ a:hover::after {
 }
 
 .p-blog__header {
-  padding: 260px 0 130px;
+  padding: 130px 0 130px;
 }
 .p-blog__header-wrapper {
   align-items: center;

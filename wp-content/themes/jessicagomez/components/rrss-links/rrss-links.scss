@@ -1,0 +1,35 @@
+.c-rrss-links {
+  padding: 24px 0;
+
+  &__link {
+    background-size: cover;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    text-decoration: none;
+    width: 32px;
+
+    &--twitter {
+      @extend .c-rrss-links__link;
+      background-image: url("../components/rrss-links/img/Twitter.svg");
+    }
+    &--facebook {
+      @extend .c-rrss-links__link;
+      background-image: url("../components/rrss-links/img/Facebook.svg");
+    }
+    &--copy {
+      @extend .c-rrss-links__link;
+      background-image: url("../components/rrss-links/img/Copy.svg");
+    }
+    &--whatsapp {
+      @extend .c-rrss-links__link;
+      background-image: url("../components/rrss-links/img/Whatsapp.svg");
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+    padding: 12px 0;
+  }
+}

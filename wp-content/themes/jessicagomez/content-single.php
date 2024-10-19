@@ -40,10 +40,9 @@
 	</div>
 
 	<div class="single-post-meta text-uppercase">
-
-		<?php
-		jessicagomez_post_tag_list();
-		?>
+		<?php jessicagomez_post_tag_list(); ?>
 	</div>
+
+	<?php include(get_template_directory()."/components/rrss-links/rrss-links.php") ?>
 	<!-- /.social share -->
 </article>

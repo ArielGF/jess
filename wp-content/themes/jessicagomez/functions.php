@@ -81,7 +81,6 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 endif; // jessicagomez_theme_setup
 add_action( 'after_setup_theme', 'jessicagomez_theme_setup' );
 
-
 //////////////////////////////////////////////////////////////////
 // Enqueue scripts and styles.
 //////////////////////////////////////////////////////////////////

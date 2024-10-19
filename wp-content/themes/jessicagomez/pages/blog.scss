@@ -4,7 +4,7 @@
 
 .p-blog {
   &__header {
-    padding: #{vars.$header-height * 2} 0 vars.$header-height;
+    padding: vars.$header-height 0 vars.$header-height;
   }
 
   &__header-wrapper {
