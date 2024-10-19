@@ -96,32 +96,73 @@ function jessicagomez_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'jessicagomez_theme_scripts', 1 );
 
 //////////////////////////////////////////////////////////////////
+// Post Types.
+//////////////////////////////////////////////////////////////////
+function post_type_libros() {
+    // Etiquetas para el Custom Post Type
+    $labels = array(
+        'name'               => _x('Libros', 'post type general name', 'text_domain'),
+        'singular_name'      => _x('Libro', 'post type singular name', 'text_domain'),
+        'menu_name'          => _x('Libros', 'admin menu', 'text_domain'),
+        'name_admin_bar'     => _x('Libro', 'add new on admin bar', 'text_domain'),
+        'add_new'            => _x('Añadir Nuevo', 'libro', 'text_domain'),
+        'add_new_item'       => __('Añadir Nuevo Libro', 'text_domain'),
+        'new_item'           => __('Nuevo Libro', 'text_domain'),
+        'edit_item'          => __('Editar Libro', 'text_domain'),
+        'view_item'          => __('Ver Libro', 'text_domain'),
+        'all_items'          => __('Todos los libros', 'text_domain'),
+        'search_items'       => __('Buscar libros', 'text_domain'),
+        'parent_item_colon'  => __('Libros Padre:', 'text_domain'),
+        'not_found'          => __('No se encontraron libros.', 'text_domain'),
+        'not_found_in_trash' => __('No se encontraron libros en la papelera.', 'text_domain'),
+    );
+
+    // Argumentos para el Custom Post Type
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'libros'), // Cambia el slug según sea necesario
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+		'menu_icon'          => 'dashicons-book', 
+    );
+
+    // Registra el Custom Post Type
+    register_post_type('libros', $args);
+}
+
+// Hook para registrar el Custom Post Type
+add_action('init', 'post_type_libros');
+
+
+//////////////////////////////////////////////////////////////////
 // Metaboxes
 //////////////////////////////////////////////////////////////////
-// Registra una meta box en el editor de la página
+/* #region BLOQUE COLABORACIONES */
 function agregar_meta_box_colaboraciones() {
     add_meta_box(
-        'colaboraciones_meta_box',          // ID de la meta box
-        __('Bloque Colaboraciones', 'text_domain'), // Título de la meta box
-        'mostrar_meta_box_colaboraciones',  // Función que muestra el contenido
-        'page',                              // Tipo de pantalla
-        'normal',                            // Contexto (normal, side, etc.)
-        'high'                               // Prioridad
+        'colaboraciones_meta_box', 
+        __('Bloque Colaboraciones', 'text_domain'), 
+        'mostrar_meta_box_colaboraciones',  
+        'page',                         
+        'normal',                         
+        'high'                        
     );
 }
 add_action('add_meta_boxes', 'agregar_meta_box_colaboraciones');
 
-// Mostrar el contenido de la meta box
 function mostrar_meta_box_colaboraciones($post) {
-    // Obtiene los valores guardados
     $logos = get_post_meta($post->ID, 'colaboraciones_logos', true);
-
-    // Si no hay logos, inicializa un array vacío
     if (!$logos) {
         $logos = array();
     }
-
-    // Campos para hasta 5 logos
     for ($i = 0; $i < 5; $i++) {
         $image_id = !empty($logos[$i]['image_id']) ? $logos[$i]['image_id'] : '';
         $link = !empty($logos[$i]['link']) ? $logos[$i]['link'] : '';
@@ -140,22 +181,19 @@ function mostrar_meta_box_colaboraciones($post) {
     }
 }
 
-// Guardar los datos de la meta box
 function guardar_meta_box_colaboraciones($post_id) {
-    // Verifica si los datos son válidos y se puede guardar
     if (isset($_POST['colaboraciones_logos'])) {
         update_post_meta($post_id, 'colaboraciones_logos', $_POST['colaboraciones_logos']);
     }
 }
 add_action('save_post', 'guardar_meta_box_colaboraciones');
 
-// Enqueue media uploader
 function cargar_scripts_media_uploader() {
     wp_enqueue_media();
     wp_enqueue_script('bloque-colaboraciones-js', get_template_directory_uri() . '/components/bloque-colaboraciones/bloque-colaboraciones.js', array('jquery'), null, true);
 }
 add_action('admin_enqueue_scripts', 'cargar_scripts_media_uploader');
-
+/* #endregion BLOQUE COLABORACIONES */
 
 //////////////////////////////////////////////////////////////////
 // Widget register.
