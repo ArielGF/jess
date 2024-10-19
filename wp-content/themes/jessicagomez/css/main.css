@@ -22,7 +22,7 @@ h1 {
   }
 }
 
-.t-h2, .c-bloque-colaboraciones__title,
+.t-h2, .c-bloque-libros__title, .c-bloque-colaboraciones__title,
 h2 {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -31,7 +31,7 @@ h2 {
   text-transform: uppercase;
 }
 @media only screen and (max-width: 600px) {
-  .t-h2, .c-bloque-colaboraciones__title,
+  .t-h2, .c-bloque-libros__title, .c-bloque-colaboraciones__title,
   h2 {
     font-size: 14px !important;
   }
@@ -67,7 +67,7 @@ h4 {
   }
 }
 
-.t-h5, .c-sidebar__wrapper:not(.widget_search) .c-sidebar__title,
+.t-h5, .c-sidebar__wrapper:not(.widget_search) .c-sidebar__title, .c-libro__title,
 h5 {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -149,7 +149,7 @@ small {
   background-color: rgb(96.140969163, 61.2511013216, 114.7488986784);
 }
 
-.o-button--secondary {
+.o-button--secondary, .c-libro__button {
   background-color: #190026;
   border-color: #190026;
   color: white;
@@ -170,7 +170,7 @@ small {
   text-transform: uppercase;
   transition: background-color 300ms ease;
 }
-.o-button--secondary:hover {
+.o-button--secondary:hover, .c-libro__button:hover {
   background-color: hsl(279.4736842105, 100%, -2.5490196078%);
 }
 
@@ -226,7 +226,7 @@ a:hover::after {
   max-width: 200px;
 }
 
-.o-title-decoration, .c-bloque-colaboraciones__title::after {
+.o-title-decoration, .c-bloque-libros__title::after, .c-bloque-colaboraciones__title::after {
   background-color: #190026;
   content: "";
   height: 2px;
@@ -265,7 +265,7 @@ a:hover::after {
   padding: 30px 0;
 }
 .c-bloque-colaboraciones {
-  background-color: #7c4f94;
+  background-color: white;
   padding: 60px 0;
   text-align: center;
 }
@@ -284,13 +284,27 @@ a:hover::after {
   width: 100%;
 }
 .c-bloque-colaboraciones__title {
-  color: white;
   margin-bottom: 50px;
   position: relative;
 }
 .c-bloque-colaboraciones__wrapper {
   display: flex;
   justify-content: space-around;
+}
+
+.c-bloque-libros {
+  background-color: #cfc0d7;
+  padding: 60px 0;
+  text-align: center;
+}
+.c-bloque-libros__title {
+  margin-bottom: 50px;
+  position: relative;
+}
+.c-bloque-libros__wrapper {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .c-content-single__categories {
@@ -399,7 +413,7 @@ a:hover::after {
   background-color: rgb(96.140969163, 61.2511013216, 114.7488986784);
 }
 
-.o-button--secondary {
+.o-button--secondary, .c-libro__button {
   background-color: #190026;
   border-color: #190026;
   color: white;
@@ -421,7 +435,7 @@ a:hover::after {
   transition: background-color 300ms ease;
 }
 
-.o-button--secondary:hover {
+.o-button--secondary:hover, .c-libro__button:hover {
   background-color: hsl(279.4736842105, 100%, -2.5490196078%);
 }
 
@@ -635,6 +649,45 @@ a:hover::after {
     opacity: 1;
     pointer-events: all;
   }
+}
+
+.c-libro {
+  display: block;
+  padding: 30px 0;
+}
+.c-libro::after, .c-libro::before {
+  content: none;
+}
+.c-libro__button {
+  margin: 0 auto;
+  bottom: -20px;
+  left: 0;
+  max-width: calc(100% - 60px);
+  position: absolute;
+  right: 0;
+  width: fit-content;
+}
+.c-libro__card {
+  background-color: white;
+  border-radius: 5px;
+  height: 100%;
+  padding: 0 30px 20px;
+  position: relative;
+  text-align: center;
+}
+.c-libro__image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  height: 340px;
+  margin: -30px auto 0;
+  width: 240px;
+}
+.c-libro__title {
+  color: black;
+  margin-top: 16px;
 }
 
 .c-portada {

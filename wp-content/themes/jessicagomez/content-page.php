@@ -1,8 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'p-blog' ); ?>>
 	<?php if(is_front_page()) {
-		include get_template_directory() . '/components/portada/portada.php';
-
-		include get_template_directory() . '/components/bloque-colaboraciones/bloque-colaboraciones.php';
+		include get_template_directory() . '/home.php';
 	} ?>
 	
 	<?php if(!is_front_page()) { ?>

@@ -1,6 +1,6 @@
 @use "../../css/base/variables.scss" as vars;
 .c-bloque-colaboraciones {
-  background-color: vars.$color-primary;
+  background-color: white;
   padding: 60px 0;
   text-align: center;
 
@@ -24,7 +24,6 @@
 
   &__title {
     @extend .t-h2 !optional;
-    color: white;
     margin-bottom: 50px;
     position: relative;
 
