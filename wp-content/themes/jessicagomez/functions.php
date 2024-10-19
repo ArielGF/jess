@@ -95,6 +95,67 @@ function jessicagomez_theme_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'jessicagomez_theme_scripts', 1 );
 
+//////////////////////////////////////////////////////////////////
+// Metaboxes
+//////////////////////////////////////////////////////////////////
+// Registra una meta box en el editor de la página
+function agregar_meta_box_colaboraciones() {
+    add_meta_box(
+        'colaboraciones_meta_box',          // ID de la meta box
+        __('Bloque Colaboraciones', 'text_domain'), // Título de la meta box
+        'mostrar_meta_box_colaboraciones',  // Función que muestra el contenido
+        'page',                              // Tipo de pantalla
+        'normal',                            // Contexto (normal, side, etc.)
+        'high'                               // Prioridad
+    );
+}
+add_action('add_meta_boxes', 'agregar_meta_box_colaboraciones');
+
+// Mostrar el contenido de la meta box
+function mostrar_meta_box_colaboraciones($post) {
+    // Obtiene los valores guardados
+    $logos = get_post_meta($post->ID, 'colaboraciones_logos', true);
+
+    // Si no hay logos, inicializa un array vacío
+    if (!$logos) {
+        $logos = array();
+    }
+
+    // Campos para hasta 5 logos
+    for ($i = 0; $i < 5; $i++) {
+        $image_id = !empty($logos[$i]['image_id']) ? $logos[$i]['image_id'] : '';
+        $link = !empty($logos[$i]['link']) ? $logos[$i]['link'] : '';
+        ?>
+        <div class="colaboracion">
+            <p>
+                <label><?php _e('Logo #' . ($i + 1) . ':'); ?></label>
+                <input class="widefat image-url" name="colaboraciones_logos[<?php echo $i; ?>][image_id]" type="hidden" value="<?php echo esc_attr($image_id); ?>" />
+                <button class="upload_image_button button"><?php _e('Seleccionar Imagen'); ?></button>
+                <br>
+                <label><?php _e('URL del enlace para logo #' . ($i + 1) . ':'); ?></label>
+                <input class="widefat" name="colaboraciones_logos[<?php echo $i; ?>][link]" type="text" value="<?php echo esc_attr($link); ?>" />
+            </p>
+        </div>
+        <?php
+    }
+}
+
+// Guardar los datos de la meta box
+function guardar_meta_box_colaboraciones($post_id) {
+    // Verifica si los datos son válidos y se puede guardar
+    if (isset($_POST['colaboraciones_logos'])) {
+        update_post_meta($post_id, 'colaboraciones_logos', $_POST['colaboraciones_logos']);
+    }
+}
+add_action('save_post', 'guardar_meta_box_colaboraciones');
+
+// Enqueue media uploader
+function cargar_scripts_media_uploader() {
+    wp_enqueue_media();
+    wp_enqueue_script('bloque-colaboraciones-js', get_template_directory_uri() . '/components/bloque-colaboraciones/bloque-colaboraciones.js', array('jquery'), null, true);
+}
+add_action('admin_enqueue_scripts', 'cargar_scripts_media_uploader');
+
 
 //////////////////////////////////////////////////////////////////
 // Widget register.
@@ -111,10 +172,17 @@ function jessicagomez_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
+	register_sidebar(array(
+        'name'          => __('Bloques Home', 'text_domain'),
+        'id'            => 'home-blocks',
+        'description'   => __('Bloques que se mostrarán en la página Home', 'text_domain'),
+        'before_widget' => '<div class="c-home-blocks %2$s">',
+        'after_widget'  => '</div>',
+    ));
+
 }
 
 add_action( 'widgets_init', 'jessicagomez_widgets_init' );
-
 
 //////////////////////////////////////////////////////////////////
 // Comment

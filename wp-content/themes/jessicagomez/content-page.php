@@ -1,13 +1,19 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'p-blog' ); ?>>
-	<?php if(is_front_page()) { include get_template_directory() . '/components/portada/portada.php'; } ?>
+	<?php if(is_front_page()) {
+		include get_template_directory() . '/components/portada/portada.php';
+
+		include get_template_directory() . '/components/bloque-colaboraciones/bloque-colaboraciones.php';
+	} ?>
 	
-	<div class="p-blog__header">
-		<div class="o-container">
-			<div class="p-blog__header-wrapper">
-				<h1><?php the_title() ?></h1>
+	<?php if(!is_front_page()) { ?>
+		<div class="p-blog__header">
+			<div class="o-container">
+				<div class="p-blog__header-wrapper">
+					<h1><?php the_title() ?></h1>
+				</div>
 			</div>
 		</div>
-	</div>
+	<?php } ?>
 
 	<div class="p-blog__posts">
 		<div class="o-container">
