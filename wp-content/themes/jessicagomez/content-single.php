@@ -22,12 +22,15 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 			<div class="c-content-single__image">
-				<?php the_post_thumbnail( 'zinnias-post-thumbnail', array( 'class' => 'img-responsive' ) ); ?>
+				<?php the_post_thumbnail( 'jessicagomez-post-thumbnail', array( 'class' => 'img-responsive' ) ); ?>
 			</div>
-			<span class="t-small"><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?>
-			| <?php _e( 'El ', 'jessicagomez' ) ?><?php the_time( 'd/F/Y' ); ?>
-			| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
-			'', __( '1 Comentario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
+			<span class="t-small">
+				<i><?php _e( 'Escrito por ', 'jessicagomez' ); ?><?php the_author_posts_link(); ?>
+				<?php _e( 'el ', 'jessicagomez' ) ?><?php the_time('j \d\e F \d\e Y'); ?>
+				</i>
+				| <?php comments_number( '<span class="home-comment">' . __( '0 Comentarios', 'jessicagomez' ) .
+				'', __( '1 Comentario', 'jessicagomez' ), __( '% Comentarios', 'jessicagomez' ) ); ?>
+			</span>
 	<?php endif; ?>
 
 	

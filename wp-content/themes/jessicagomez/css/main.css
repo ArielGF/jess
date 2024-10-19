@@ -90,7 +90,7 @@ body {
   }
 }
 
-.t-small, .c-sidebar__wrapper:not(.widget_search) .c-sidebar__title + ul li a, .c-footer__copyright, .c-footer__copyright a, .c-footer__links a, .c-content-single__categories a,
+.t-small, .c-sidebar__wrapper:not(.widget_search) .c-sidebar__title + ul li a, .c-footer__copyright, .c-footer__copyright a, .c-footer__links a, .c-content-single__categories a, .c-author-link__description,
 small {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -138,6 +138,7 @@ small {
   font-size: 16px;
   justify-content: center;
   overflow: hidden;
+  min-width: 60px;
   padding: 10px 20px;
   position: relative;
   text-decoration: none;
@@ -162,6 +163,7 @@ small {
   font-size: 16px;
   justify-content: center;
   overflow: hidden;
+  min-width: 60px;
   padding: 10px 20px;
   position: relative;
   text-decoration: none;
@@ -186,6 +188,7 @@ small {
   font-size: 16px;
   justify-content: center;
   overflow: hidden;
+  min-width: 60px;
   padding: 10px 20px;
   position: relative;
   text-decoration: none;
@@ -223,6 +226,9 @@ a:hover::after {
   max-width: 200px;
 }
 
+.c-author-link {
+  padding: 30px 0;
+}
 .c-content-single__categories {
   align-items: center;
   display: flex;
@@ -317,6 +323,7 @@ a:hover::after {
   font-size: 16px;
   justify-content: center;
   overflow: hidden;
+  min-width: 60px;
   padding: 10px 20px;
   position: relative;
   text-decoration: none;
@@ -342,6 +349,7 @@ a:hover::after {
   font-size: 16px;
   justify-content: center;
   overflow: hidden;
+  min-width: 60px;
   padding: 10px 20px;
   position: relative;
   text-decoration: none;
@@ -367,6 +375,7 @@ a:hover::after {
   font-size: 16px;
   justify-content: center;
   overflow: hidden;
+  min-width: 60px;
   padding: 10px 20px;
   position: relative;
   text-decoration: none;

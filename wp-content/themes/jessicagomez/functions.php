@@ -56,7 +56,7 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 		 */
 		add_theme_support( "post-thumbnails" );
 
-		add_image_size( 'zinnias-post-thumbnail', 710, 430, true );
+		add_image_size( 'jessicagomez-post-thumbnail', 710, 430, true );
 
 
 		/*

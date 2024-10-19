@@ -6,7 +6,7 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumb">
-			<?php the_post_thumbnail( 'zinnias-post-thumbnail', array( 'class' => 'img-responsive' ) ); ?>
+			<?php the_post_thumbnail( 'jessicagomez-post-thumbnail', array( 'class' => 'img-responsive' ) ); ?>
 		</div>
 	<?php endif; ?>
 
