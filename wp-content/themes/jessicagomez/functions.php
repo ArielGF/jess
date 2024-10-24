@@ -98,6 +98,8 @@ add_action( 'wp_enqueue_scripts', 'jessicagomez_theme_scripts', 1 );
 //////////////////////////////////////////////////////////////////
 // Post Types.
 //////////////////////////////////////////////////////////////////
+
+// #region LIBROS
 function post_type_libros() {
     // Etiquetas para el Custom Post Type
     $labels = array(
@@ -140,61 +142,126 @@ function post_type_libros() {
 
 // Hook para registrar el Custom Post Type
 add_action('init', 'post_type_libros');
+// #endregion LIBROS
+
+/* #region COLABORACIONES */
+function post_type_colabs() {
+    // Etiquetas para el Custom Post Type
+    $labels = array(
+        'name'               => _x('Colaboraciones', 'post type general name', 'text_domain'),
+        'singular_name'      => _x('Colaboración', 'post type singular name', 'text_domain'),
+        'menu_name'          => _x('Colaboraciones', 'admin menu', 'text_domain'),
+        'name_admin_bar'     => _x('Colaboración', 'add new on admin bar', 'text_domain'),
+        'add_new'            => _x('Añadir nueva', 'colaboración', 'text_domain'),
+        'add_new_item'       => __('Añadir nueva colaboración', 'text_domain'),
+        'new_item'           => __('Nueva colaboración', 'text_domain'),
+        'edit_item'          => __('Editar colaboración', 'text_domain'),
+        'view_item'          => __('Ver colaboración', 'text_domain'),
+        'all_items'          => __('Todas las colaboraciones', 'text_domain'),
+        'search_items'       => __('Buscar colaboraciones', 'text_domain'),
+        'parent_item_colon'  => __('Colaboraciones Madre:', 'text_domain'),
+        'not_found'          => __('No se encontraron colaboraciones.', 'text_domain'),
+        'not_found_in_trash' => __('No se encontraron colaboraciones en la papelera.', 'text_domain'),
+    );
+
+    // Argumentos para el Custom Post Type
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'colaboraciones'), // Cambia el slug según sea necesario
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+		'menu_icon'          => 'dashicons-groups', 
+    );
+
+    // Registra el Custom Post Type
+    register_post_type('colaboraciones', $args);
+}
+
+// Hook para registrar el Custom Post Type
+add_action('init', 'post_type_colabs');
+/* #endregion COLABORACIONES */
 
 
 //////////////////////////////////////////////////////////////////
 // Metaboxes
 //////////////////////////////////////////////////////////////////
-/* #region BLOQUE COLABORACIONES */
-function agregar_meta_box_colaboraciones() {
+
+// #region CAMPOS PARA COLABORACIONES
+add_action('add_meta_boxes', 'metabox_colaboraciones');
+function metabox_colaboraciones() {
     add_meta_box(
-        'colaboraciones_meta_box', 
-        __('Bloque Colaboraciones', 'text_domain'), 
-        'mostrar_meta_box_colaboraciones',  
-        'page',                         
-        'normal',                         
-        'high'                        
+        'colabs_propiedades_meta_box',          // ID del metabox
+        __('Propiedades', 'text_domain'),       // Título del metabox
+        'colabs_propiedades_meta_box_callback', // Callback para mostrar el contenido
+        'colaboraciones',                       // Post type donde aparecerá
+        'normal',                               // Contexto
+        'high'                                  // Prioridad
     );
 }
-add_action('add_meta_boxes', 'agregar_meta_box_colaboraciones');
 
-function mostrar_meta_box_colaboraciones($post) {
-    $logos = get_post_meta($post->ID, 'colaboraciones_logos', true);
-    if (!$logos) {
-        $logos = array();
+function colabs_propiedades_meta_box_callback($post) {
+    $selected_option = get_post_meta($post->ID, '_colabs_type', true);
+    $valor_colaboracion = get_post_meta($post->ID, '_colaboracion_ext-link', true);
+
+    $options = array('evento', 'programa', 'podcast', 'libro', 'revista', 'noticias', 'blog', 'web');
+
+    wp_nonce_field('colabs_propiedades_meta_box_nonce', 'colabs_propiedades_meta_box_nonce'); ?>
+
+	<p><label for="colabs_type"><?php _e('Selecciona un tipo:', 'text_domain'); ?></label>
+	<br>
+        <select name="colabs_type" id="colabs_type">
+            <option value=""><?php _e('Seleccione una opción', 'text_domain'); ?></option>
+            <?php foreach ($options as $option): ?>
+                <option value="<?php echo esc_attr($option); ?>" <?php selected($selected_option, $option); ?>>
+                    <?php echo esc_html(ucfirst($option)); ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </p>
+
+    <p>
+        <label for="colaboracion_text"><?php _e('Link externo:', 'text_domain'); ?></label>
+        <input type="text" id="colaboracion_text" name="colaboracion_text" value="<?php echo esc_attr($valor_colaboracion); ?>" style="width:100%;" />
+    </p>
+    <?php
+}
+
+add_action('save_post', 'colabs_save_propiedades_meta_box_data');
+function colabs_save_propiedades_meta_box_data($post_id) {
+    if (!isset($_POST['colabs_propiedades_meta_box_nonce']) || !wp_verify_nonce($_POST['colabs_propiedades_meta_box_nonce'], 'colabs_propiedades_meta_box_nonce')) {
+        return;
     }
-    for ($i = 0; $i < 5; $i++) {
-        $image_id = !empty($logos[$i]['image_id']) ? $logos[$i]['image_id'] : '';
-        $link = !empty($logos[$i]['link']) ? $logos[$i]['link'] : '';
-        ?>
-        <div class="colaboracion">
-            <p>
-                <label><?php _e('Logo #' . ($i + 1) . ':'); ?></label>
-                <input class="widefat image-url" name="colaboraciones_logos[<?php echo $i; ?>][image_id]" type="hidden" value="<?php echo esc_attr($image_id); ?>" />
-                <button class="upload_image_button button"><?php _e('Seleccionar Imagen'); ?></button>
-                <br>
-                <label><?php _e('URL del enlace para logo #' . ($i + 1) . ':'); ?></label>
-                <input class="widefat" name="colaboraciones_logos[<?php echo $i; ?>][link]" type="text" value="<?php echo esc_attr($link); ?>" />
-            </p>
-        </div>
-        <?php
+
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    if (isset($_POST['colabs_type'])) {
+        update_post_meta($post_id, '_colabs_type', sanitize_text_field($_POST['colabs_type']));
+    } else {
+        delete_post_meta($post_id, '_colabs_type');
+    }
+
+    if (isset($_POST['colaboracion_text'])) {
+        update_post_meta($post_id, '_colaboracion_ext-link', sanitize_text_field($_POST['colaboracion_text']));
+    } else {
+        delete_post_meta($post_id, '_colaboracion_ext-link');
     }
 }
 
-function guardar_meta_box_colaboraciones($post_id) {
-    if (isset($_POST['colaboraciones_logos'])) {
-        update_post_meta($post_id, 'colaboraciones_logos', $_POST['colaboraciones_logos']);
-    }
-}
-add_action('save_post', 'guardar_meta_box_colaboraciones');
-
-function cargar_scripts_media_uploader() {
-    wp_enqueue_media();
-    wp_enqueue_script('bloque-colaboraciones-js', get_template_directory_uri() . '/components/bloque-colaboraciones/bloque-colaboraciones.js', array('jquery'), null, true);
-}
-add_action('admin_enqueue_scripts', 'cargar_scripts_media_uploader');
-/* #endregion BLOQUE COLABORACIONES */
-
+// #endregion CAMPOS PARA COLABORACIONES
 //////////////////////////////////////////////////////////////////
 // Widget register.
 //////////////////////////////////////////////////////////////////

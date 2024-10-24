@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'p-blog' ); ?>>
 	<?php if(is_front_page()) {
-		include get_template_directory() . '/home.php';
+		include get_template_directory() . '/page-home.php';
 	} ?>
 	
 	<?php if(!is_front_page()) { ?>

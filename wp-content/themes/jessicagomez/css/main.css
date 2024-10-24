@@ -269,29 +269,10 @@ a:hover::after {
   padding: 60px 0;
   text-align: center;
 }
-.c-bloque-colaboraciones__item {
-  background-position: center;
-  background-size: cover;
-  border-radius: 100%;
-  display: block;
-  height: 120px;
-  width: 120px;
-}
-.c-bloque-colaboraciones__item::after, .c-bloque-colaboraciones__item::before {
-  content: none;
-}
-.c-bloque-colaboraciones__item img {
-  width: 100%;
-}
 .c-bloque-colaboraciones__title {
   margin-bottom: 50px;
   position: relative;
 }
-.c-bloque-colaboraciones__wrapper {
-  display: flex;
-  justify-content: space-around;
-}
-
 .c-bloque-libros {
   background-color: #cfc0d7;
   padding: 60px 0;
@@ -304,7 +285,59 @@ a:hover::after {
 .c-bloque-libros__wrapper {
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+@media only screen and (max-width: 1440px) {
+  .c-bloque-libros__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .c-bloque-libros__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .c-bloque-libros__wrapper {
+    display: block;
+  }
+}
+
+.c-colaboracion {
+  background-color: #cfc0d7;
+  border-radius: 5px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 150px auto;
+  padding: 30px;
+  text-align: left;
+}
+.c-colaboracion__content {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+  justify-content: space-between;
+}
+.c-colaboracion__description {
+  flex-grow: 1;
+}
+.c-colaboracion__description > a {
+  align-items: center;
+  color: black;
+  display: flex;
+  font-weight: bold;
+  gap: 6px;
+}
+.c-colaboracion__description > a::after {
+  content: none;
+}
+.c-colaboracion__image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  height: 150px;
+  width: 150px;
 }
 
 .c-content-single__categories {
@@ -676,6 +709,7 @@ a:hover::after {
   text-align: center;
 }
 .c-libro__image {
+  background-color: white;
   background-position: center;
   background-size: cover;
   border-radius: 5px;

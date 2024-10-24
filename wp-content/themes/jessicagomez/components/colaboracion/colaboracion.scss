@@ -1,0 +1,43 @@
+@use "../../css/base/variables.scss" as vars;
+
+.c-colaboracion {
+  background-color: vars.$color-background-1;
+  border-radius: 5px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 150px auto;
+  padding: 30px;
+  text-align: left;
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  &__description {
+    flex-grow: 1;
+
+    > a {
+      align-items: center;
+      color: black;
+      display: flex;
+      font-weight: bold;
+      gap: 6px;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__image {
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    height: 150px;
+    width: 150px;
+  }
+}
