@@ -273,6 +273,23 @@ a:hover::after {
   margin-bottom: 50px;
   position: relative;
 }
+.c-bloque-colaboraciones__wrapper {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, auto);
+}
+@media only screen and (max-width: 1440px) {
+  .c-bloque-colaboraciones__wrapper {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .c-bloque-colaboraciones__wrapper {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
 .c-bloque-libros {
   background-color: #cfc0d7;
   padding: 60px 0;

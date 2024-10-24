@@ -15,4 +15,18 @@
       @extend .o-title-decoration !optional;
     }
   }
+
+  &__wrapper {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, auto);
+
+    @include mixins.BreakpointAndDown("lg") {
+      grid-template-columns: repeat(2, auto);
+    }
+    @include mixins.BreakpointAndDown("md") {
+      display: flex;
+      flex-flow: column;
+    }
+  }
 }
