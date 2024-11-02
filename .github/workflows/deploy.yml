@@ -1,0 +1,39 @@
+name: Deploy to WordPress
+
+on:
+  push:
+    branches:
+      - master  # Cambia esto si usas otra rama
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4' # Cambia esto a la versión de PHP que necesites
+
+      - name: Install Composer dependencies
+        run: composer install --no-dev
+
+      - name: Deploy to WordPress
+        env:
+          WORDPRESS_HOST: ${{ secrets.WORDPRESS_HOST }}
+          WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
+          WORDPRESS_PASSWORD: ${{ secrets.WORDPRESS_PASSWORD }}
+        run: |
+          # Asegúrate de tener el plugin WP-CLI instalado
+          curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          chmod +x wp-cli.phar
+          sudo mv wp-cli.phar /usr/local/bin/wp
+
+          # Instalar WP-CLI y despliegue
+          wp core download --path=/var/www/html
+          wp config create --dbname=DB_NAME --dbuser=DB_USER --dbpass=DB_PASSWORD --dbhost=DB_HOST --path=/var/www/html
+          wp db import /path/to/your/dump.sql --path=/var/www/html # Si necesitas importar una base de datos
+          wp plugin activate plugin-slug --path=/var/www/html # Activa un plugin si es necesario
