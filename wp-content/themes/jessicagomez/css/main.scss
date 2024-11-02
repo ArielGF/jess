@@ -13,11 +13,16 @@ body {
 @import "objects/decorations.scss";
 @import "objects/inputs.scss";
 
+@import "../pages/404.scss";
+@import "../pages/blog.scss";
+@import "../pages/single.scss";
+
 @import "../components/author-link/author-link.scss";
 @import "../components/bloque-colaboraciones/bloque-colaboraciones.scss";
 @import "../components/bloque-libros/bloque-libros.scss";
 @import "../components/colaboracion/colaboracion.scss";
 @import "../components/content-single/content-single.scss";
+@import "../components/featured-articles/featured-articles.scss";
 @import "../components/footer/footer.scss";
 @import "../components/header/header.scss";
 @import "../components/libro/libro.scss";
@@ -27,9 +32,5 @@ body {
 @import "../components/search-form/search-form.scss";
 @import "../components/sidebar/sidebar.scss";
 @import "../components/tags/tags.scss";
-
-@import "../pages/404.scss";
-@import "../pages/blog.scss";
-@import "../pages/single.scss";
 
 @import "plugins/ccf-form.scss";

@@ -11,28 +11,28 @@
 				</div>
 			</div>
 		</div>
-	<?php } ?>
 
-	<div class="p-blog__posts">
-		<div class="o-container">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="post-thumb">
-					<?php the_post_thumbnail( 'jessicagomez-post-thumbnail', array( 'class' => 'img-responsive' ) ); ?>
+		<div class="p-blog__posts">
+			<div class="o-container">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<div class="post-thumb">
+						<?php the_post_thumbnail( 'jessicagomez-post-thumbnail', array( 'class' => 'img-responsive' ) ); ?>
+					</div>
+				<?php endif; ?>
+
+				<div class="entry-content">
+					<?php the_content(); ?>
+
+					<?php
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . __( 'Pages:', 'jessicagomez' ),
+						'after'  => '</div>',
+					) );
+					?>
 				</div>
-			<?php endif; ?>
-
-			<div class="entry-content">
-				<?php the_content(); ?>
-
-				<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'jessicagomez' ),
-					'after'  => '</div>',
-				) );
-				?>
 			</div>
 		</div>
-	</div>
+	<?php } ?>
 
 	<?php wp_footer(); ?>
 

@@ -8,8 +8,7 @@
             
             <div class="c-portada__content-wrapper">
                 <div class="c-portada__description">
-                    <p class="t-h2">Lorem ipsum</p>
-                    <p>Lorem ipsum dolor sit amet molestie aliquam ipsum dolor ea elitr magna labore sanctus invidunt aliquyam consequat. Ea labore autem luptatum ipsum sed dolore ipsum duis et. Takimata amet vel ut feugiat clita ipsum. Erat diam lobortis dolore at sea consequat lorem accumsan magna consetetur. </p>
+                    <?php the_content(); ?>
                 </div>
                 <a href="" class="o-button--primary">Leer más</a>
             </div>

@@ -2,7 +2,7 @@
 @use "../../css/base/mixins.scss" as mixins;
 @use "../../css/base/variables.scss" as vars;
 
-$front-page: '.c-header--front-page';
+$front-page: ".c-header--front-page";
 
 .c-header {
   background-color: vars.$color-secondary;
@@ -15,7 +15,7 @@ $front-page: '.c-header--front-page';
   &--front-page {
     @extend .c-header;
     background-color: rgba(0, 0, 0, 0);
-    position:absolute;
+    position: absolute;
   }
 
   @include mixins.BreakpointAndDown("md") {
@@ -94,7 +94,6 @@ $front-page: '.c-header--front-page';
 
         @include mixins.BreakpointAndDown("md") {
           color: white !important;
-          
         }
 
         &::after {

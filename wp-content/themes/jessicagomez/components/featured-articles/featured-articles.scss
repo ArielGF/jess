@@ -1,0 +1,19 @@
+.c-featured-articles {
+  background-color: white;
+  padding: 60px 0;
+  text-align: center;
+
+  &__posts-wrapper {
+    @extend .p-blog__posts-wrapper !optional;
+  }
+
+  &__title {
+    @extend .t-h2 !optional;
+    margin-bottom: 50px;
+    position: relative;
+
+    &::after {
+      @extend .o-title-decoration !optional;
+    }
+  }
+}
