@@ -818,6 +818,7 @@ a:hover::after {
 @media only screen and (max-width: 1024px) {
   .c-portada {
     background-color: rgba(124, 79, 148, 0.5);
+    height: auto;
     padding: 70px 0 30px;
     min-height: 50px;
   }
@@ -829,11 +830,6 @@ a:hover::after {
   background-color: rgba(255, 255, 255, 0.6);
   max-width: 450px;
   padding: 10px 0;
-}
-@media only screen and (max-width: 1024px) {
-  .c-portada__description {
-    padding: 15px;
-  }
 }
 .c-portada__image-1, .c-portada__image-2 {
   animation-name: fade-in;

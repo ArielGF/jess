@@ -11,6 +11,7 @@ $animation-duration: 300ms;
 
   @include mixins.BreakpointAndDown("md") {
     background-color: rgba(vars.$color-primary, 0.5);
+    height: auto;
     padding: 70px 0 30px;
     min-height: 50px;
   }
