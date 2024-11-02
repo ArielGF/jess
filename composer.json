@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php": ">=7.4",
+        "nombre/paquete": "^1.0"
+    }
+}
