@@ -1,6 +1,5 @@
 {
     "require": {
-        "php": ">=7.4",
-        "nombre/paquete": "^1.0"
+        "php": ">=7.4"
     }
 }
