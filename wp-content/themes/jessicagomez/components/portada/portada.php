@@ -4,6 +4,7 @@
             <div class="c-portada__title-wrapper">
                 <span class="c-portada__small">Escritora</span>
                 <h1 class="c-portada__title">| Jessica Gómez</h1>
+                <!-- Prueba -->
             </div>
             
             <div class="c-portada__content-wrapper">
