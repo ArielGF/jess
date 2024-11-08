@@ -13,7 +13,7 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0 # Esto asegura que el repositorio se clona completamente
+          fetch-depth: 0 # Asegura que se obtenga todo el historial de commits
 
       - name: Set up Git
         run: git config --global user.email "youremail@example.com" && git config --global user.name "Your Name"
@@ -28,17 +28,21 @@ jobs:
             echo "No changes detected. Exiting."
             exit 0
           fi
-          # Mostrar los archivos modificados
+          # Mostrar los archivos modificados para debug
           cat changed-files.txt
         continue-on-error: true
 
-      - name: Sync changed files to Webempresa server
+      - name: Upload changed files to Webempresa server using lftp
         if: success() # Solo se ejecuta si la tarea anterior no falló
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: "178.33.115.23"
-          username: "desarrollo@jessica2-cp27.wordpresstemporal.com"
-          password: "arielDesarrollo2024"
-          port: 21
-          protocol: "ftps"
-          local-dir: "./"
+        run: |
+          # Instalar lftp
+          sudo apt-get install -y lftp
+
+          # Conectar al servidor FTP y subir solo los archivos modificados
+          lftp -u "desarrollo@jessica2-cp27.wordpresstemporal.com", "arielDesarrollo2024" ftps://178.33.115.23 <<EOF
+          set ftp:ssl-allow yes
+          set mirror:use-pget-n 5
+          set mirror:parallel-directories 3
+          mirror --only-newer --verbose --include-glob "changed-files.txt" . /remote/target/directory/
+          quit
+          EOF
