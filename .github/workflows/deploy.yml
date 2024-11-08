@@ -3,7 +3,7 @@ name: Deploy to Webempresa
 on:
   push:
     branches:
-      - master
+      - master # Solo se ejecuta en la rama master
 
 jobs:
   deploy:
@@ -13,12 +13,12 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: Sync files to Webempresa server via SFTP
-        uses: appleboy/scp-action@master
+      - name: Sync files to Webempresa server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          host: "178.33.115.23" # IP del servidor
-          username: "desarrollo@jessica2-cp27.wordpresstemporal.com" # Usuario de FTP
-          password: "arielDesarrollo2024" # Contraseña de FTP
-          port: 22 # Puerto estándar para SFTP
-          source: "./" # Directorio local del repositorio
-          target: "/public_html/desarrollo/" # Directorio en el servidor donde quieres desplegar los archivos
+          server: "178.33.115.23"
+          username: "desarrollo@jessica2-cp27.wordpresstemporal.com"
+          password: "arielDesarrollo2024"
+          port: 21
+          local-dir: "./" # Directorio local del repositorio (cambia si es necesario)
+          server-dir: "/public_html/desarrollo/" # Directorio en tu servidor donde quieres desplegar los archivos
