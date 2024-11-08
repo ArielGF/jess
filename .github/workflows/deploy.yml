@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Check out the code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Esto asegura que el repositorio se clona completamente
 
       - name: Set up Git
         run: git config --global user.email "youremail@example.com" && git config --global user.name "Your Name"
@@ -20,7 +22,7 @@ jobs:
         id: changed-files
         run: |
           # Obtener la lista de archivos modificados entre el commit actual y el anterior
-          git diff --name-only HEAD^ HEAD > changed-files.txt
+          git diff --name-only HEAD~1 HEAD > changed-files.txt
           # Si no hay cambios, salir temprano
           if [ ! -s changed-files.txt ]; then
             echo "No changes detected. Exiting."
@@ -40,5 +42,3 @@ jobs:
           port: 21
           protocol: "ftps"
           local-dir: "./"
-          # Solo subir los archivos modificados
-          file-patterns: ${{ steps.changed-files.outputs.changed_files }}
