@@ -20,5 +20,5 @@ jobs:
           username: "desarrollo@jessica2-cp27.wordpresstemporal.com"
           password: "arielDesarrollo2024"
           port: 21
-          protocol: "ftps" # Cambia el protocolo a FTPS
+          protocol: "ftps"
           local-dir: "./"
