@@ -13,10 +13,12 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: Upload files using FTP
-        env:
-          FTP_HOST: "178.33.115.23"
-          FTP_USER: "desarrollo@jessica2-cp27.wordpresstemporal.com"
-          FTP_PASS: "arielDesarrollo2024"
-        run: |
-          find . -type f -exec curl -T {} ftp://$FTP_USER:$FTP_PASS@$FTP_HOST/public_html/desarrollo/{} \;
+      - name: Sync files to Webempresa server via SFTP
+        uses: appleboy/scp-action@master
+        with:
+          host: "178.33.115.23" # IP del servidor
+          username: "desarrollo@jessica2-cp27.wordpresstemporal.com" # Usuario de FTP
+          password: "arielDesarrollo2024" # Contraseña de FTP
+          port: 22 # Puerto estándar para SFTP
+          source: "./" # Directorio local del repositorio
+          target: "/public_html/desarrollo/" # Directorio en el servidor donde quieres desplegar los archivos
