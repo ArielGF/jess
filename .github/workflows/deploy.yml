@@ -3,7 +3,7 @@ name: Deploy to Webempresa
 on:
   push:
     branches:
-      - master # Solo se ejecuta en la rama master
+      - master
 
 jobs:
   deploy:
@@ -13,11 +13,10 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: Sync files to Webempresa server
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: 178.33.115.23
-          username: desarrollo@jessica2-cp27.wordpresstemporal.com
-          password: arielDesarrollo2024
-          local-dir: "./" # Directorio local del repositorio (cambia si es necesario)
-          server-dir: "/public_html/desarrollo/" # Directorio en tu servidor donde quieres desplegar los archivos
+      - name: Upload files using FTP
+        env:
+          FTP_HOST: "178.33.115.23"
+          FTP_USER: "desarrollo@jessica2-cp27.wordpresstemporal.com"
+          FTP_PASS: "arielDesarrollo2024"
+        run: |
+          find . -type f -exec curl -T {} ftp://$FTP_USER:$FTP_PASS@$FTP_HOST/public_html/desarrollo/{} \;
