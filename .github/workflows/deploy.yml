@@ -3,7 +3,7 @@ name: Deploy to Webempresa
 on:
   push:
     branches:
-      - master # Solo se ejecuta en la rama master
+      - master
 
 jobs:
   deploy:
@@ -20,5 +20,6 @@ jobs:
           username: "desarrollo@jessica2-cp27.wordpresstemporal.com"
           password: "arielDesarrollo2024"
           port: 21
-          local-dir: "./" # Directorio local del repositorio (cambia si es necesario)
-          server-dir: "/public_html/desarrollo/" # Directorio en tu servidor donde quieres desplegar los archivos
+          local-dir: "./"
+          server-dir: "/public_html/desarrollo/"
+          method: "ftp" # Usa el método ftp activo estándar en lugar del pasivo
