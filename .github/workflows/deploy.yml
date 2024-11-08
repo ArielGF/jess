@@ -21,4 +21,4 @@ jobs:
           username: ${{ secrets.WEBEMPRESA_USER }}
           password: ${{ secrets.WEBEMPRESA_PASS }}
           local-dir: "./" # Directorio local del repositorio (cambia si es necesario)
-          server-dir: "/public_html/desarrollo" # Directorio en tu servidor donde quieres desplegar los archivos
+          server-dir: "/public_html/desarrollo/" # Directorio en tu servidor donde quieres desplegar los archivos
