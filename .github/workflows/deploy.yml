@@ -21,5 +21,5 @@ jobs:
           password: "arielDesarrollo2024"
           port: 21
           protocol: "ftps"
-          local-dir: "./wp-content/themes/jessicagomez/"
-          remote-dir: "../../wp-content/themes/jessicagomez/"
+          local-dir: "../../wp-content/themes/jessicagomez/"
+          remote-dir: "/wp-content/themes/jessicagomez/"
