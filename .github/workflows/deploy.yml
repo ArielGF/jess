@@ -1,0 +1,24 @@
+name: Deploy to Webempresa
+
+on:
+  push:
+    branches:
+      - master # Solo se ejecuta en la rama master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+
+      - name: Sync files to Webempresa server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.WEBEMPRESA_HOST }}
+          port: ${{ secrets.WEBEMPRESA_PORT }}
+          username: ${{ secrets.WEBEMPRESA_USER }}
+          password: ${{ secrets.WEBEMPRESA_PASS }}
+          local-dir: "./" # Directorio local del repositorio (cambia si es necesario)
+          server-dir: "/public_html/desarrollo" # Directorio en tu servidor donde quieres desplegar los archivos
