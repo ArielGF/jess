@@ -13,22 +13,19 @@
 	</div>
 	<div class="p-blog__posts">
 		<div class="o-container">
-			<div class="p-blog__posts-wrapper">
-				<?php if ( have_posts() ) {
-					while ( have_posts() ) : the_post();
-
+			
+				<?php if ( have_posts() ) { ?>
+					<div class="p-blog__posts-wrapper">
+					<?php while ( have_posts() ) : the_post();
 						get_template_part( 'content', 'post' );
+					endwhile; ?>
+					</div>
+					<?php jessicagomez_posts_navigation(); ?>
 
-					endwhile;
-
-					jessicagomez_posts_navigation();
-
-				} else {
-
+				<?php } else {
 					get_template_part( 'content', 'none' );
-
-				} ?>
-			</div>
+				} /* else */ ?>
+			
 		</div>
 	</div>
 </div>

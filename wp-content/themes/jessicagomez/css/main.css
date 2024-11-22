@@ -288,6 +288,11 @@ a:hover::after {
   justify-content: center;
   text-align: center;
 }
+.p-blog__posts img {
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+}
 .p-blog__posts-wrapper, .c-featured-articles__posts-wrapper {
   display: grid;
   gap: 24px;
@@ -306,6 +311,10 @@ a:hover::after {
   }
 }
 
+.p-single__content img {
+  border-radius: 5px;
+  margin: 20px auto 0;
+}
 .p-single__header {
   padding: 195px 0 25px;
 }
@@ -433,6 +442,10 @@ a:hover::after {
   display: flex;
   margin-bottom: 8px;
   overflow: hidden;
+}
+.c-content-single__image img {
+  height: auto;
+  width: 100%;
 }
 
 .c-featured-articles {
@@ -807,6 +820,19 @@ a:hover::after {
 .c-libro__title {
   color: black;
   margin-top: 16px;
+}
+
+.c-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.c-navigation__prev a, .c-navigation__next a {
+  color: #190026;
+}
+.c-navigation__next {
+  margin-left: auto;
 }
 
 .c-portada {

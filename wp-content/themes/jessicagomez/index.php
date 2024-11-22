@@ -17,16 +17,17 @@
 
             <?php get_search_form(); ?>
 
-            <div class="p-blog__posts-wrapper">
-                <?php if ( have_posts() ) {
-                    while (have_posts()) : the_post();
+            
+                <?php if ( have_posts() ) { ?>
+                    <div class="p-blog__posts-wrapper">
+                    <?php while (have_posts()) : the_post();
                         get_template_part('content', 'post');
-                    endwhile;
-                    jessicagomez_posts_navigation();
-                } else {
+                    endwhile; ?>
+                    </div>
+                    <?php jessicagomez_posts_navigation(); ?>
+                <?php } else {
                     get_template_part('content', 'none');
                 } ?>
-            </div>
         </div>
     </div>
     

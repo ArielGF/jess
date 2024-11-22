@@ -3,6 +3,13 @@
 @use "../css/base/variables.scss" as vars;
 
 .p-single {
+  &__content {
+    img {
+      border-radius: 5px;
+      margin: 20px auto 0;
+    }
+  }
+
   &__header {
     padding: #{vars.$header-height * 1.5} 0 25px;
   }
@@ -12,7 +19,7 @@
     gap: functions.colsToGrid(1);
     grid-template-columns: functions.colsToGrid(8) functions.colsToGrid(3);
 
-    @include mixins.BreakpointAndDown('md') {
+    @include mixins.BreakpointAndDown("md") {
       display: block;
     }
   }

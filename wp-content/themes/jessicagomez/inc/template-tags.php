@@ -8,17 +8,17 @@ if ( ! function_exists( 'jessicagomez_posts_navigation' ) ) {
 
 	function jessicagomez_posts_navigation() {
 		?>
-		<div class="navigation">
+		<div class="c-navigation">
 
 			<?php if ( get_previous_posts_link() ) { ?>
-				<div class="next-post pull-left">
-					<?php previous_posts_link( __( '<i class="fa fa-angle-double-left"></i> Prev Posts', 'jessicagomez' ) ); ?>
+				<div class="c-navigation__prev">
+					<?php previous_posts_link( __( '<i class="fa fa-angle-double-left"></i> Anterior', 'jessicagomez' ) ); ?>
 				</div>
 			<?php } ?>
 
 			<?php if ( get_next_posts_link() ) { ?>
-				<div class="older-post pull-right">
-					<?php next_posts_link( __( 'Next Posts <i class="fa fa-angle-double-right"></i>', 'jessicagomez' ) ); ?>
+				<div class="c-navigation__next">
+					<?php next_posts_link( __( 'Siguiente <i class="fa fa-angle-double-right"></i>', 'jessicagomez' ) ); ?>
 				</div>
 			<?php } ?>
 

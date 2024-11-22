@@ -16,6 +16,14 @@
     text-align: center;
   }
 
+  &__posts {
+    img {
+      border-radius: 5px;
+      display: block;
+      margin: 20px auto;
+    }
+  }
+
   &__posts-wrapper {
     display: grid;
     gap: 24px;

@@ -1,0 +1,17 @@
+@use "../../css/base/variables.scss" as vars;
+
+.c-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 100%;
+
+  &__prev a,
+  &__next a {
+    color: vars.$color-secondary;
+  }
+
+  &__next {
+    margin-left: auto;
+  }
+}
