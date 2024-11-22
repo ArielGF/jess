@@ -8,11 +8,18 @@
 
     a {
       @extend .t-small !optional;
+      color: vars.$color-primary;
       padding: 10px 5px;
       text-transform: uppercase;
 
       &::after {
         content: none;
+      }
+
+      &:focus,
+      &:visited,
+      &:active {
+        color: vars.$color-primary;
       }
     }
   }

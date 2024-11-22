@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-page
+
     <!-- main-content section start -->
     <div class="main-content">
         <div class="row">

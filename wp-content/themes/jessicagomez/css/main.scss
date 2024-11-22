@@ -6,6 +6,19 @@ body {
   margin: 0;
 }
 
+img,
+iframe {
+  max-width: 100%;
+}
+
+iframe {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto 20px;
+}
+
 @import "base/typography.scss";
 @import "base/containers.scss";
 

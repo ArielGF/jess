@@ -7,6 +7,19 @@ body {
   margin: 0;
 }
 
+img,
+iframe {
+  max-width: 100%;
+}
+
+iframe {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto 20px;
+}
+
 .t-h1, .c-portada__title,
 h1 {
   font-family: "Montserrat", sans-serif;
@@ -459,11 +472,15 @@ a:hover::after {
   justify-content: flex-start;
 }
 .c-content-single__categories a {
+  color: #7c4f94;
   padding: 10px 5px;
   text-transform: uppercase;
 }
 .c-content-single__categories a::after {
   content: none;
+}
+.c-content-single__categories a:focus, .c-content-single__categories a:visited, .c-content-single__categories a:active {
+  color: #7c4f94;
 }
 .c-content-single__image {
   border-radius: 5px;
@@ -771,6 +788,7 @@ a:hover::after {
 .c-header__menu-hamburger {
   background-color: white;
   border-radius: 30px;
+  box-shadow: 0 0 10px 0 rgba(25, 0, 38, 0.2);
   cursor: pointer;
   display: none;
   height: 32px;

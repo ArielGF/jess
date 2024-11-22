@@ -133,6 +133,7 @@ $front-page: ".c-header--front-page";
   &__menu-hamburger {
     background-color: white;
     border-radius: 30px;
+    box-shadow: 0 0 10px 0 rgba(vars.$color-secondary, 0.2);
     cursor: pointer;
     display: none;
     height: 32px;
