@@ -4,8 +4,9 @@
             <div class="c-portada__title-wrapper">
                 <span class="c-portada__small">Escritora</span>
                 <h1 class="c-portada__title">| Jessica Gómez</h1>
-                <!-- Prueba GIT -->
             </div>
+
+            <div class="c-portada__image-responsive"></div>
             
             <div class="c-portada__content-wrapper">
                 <div class="c-portada__description">
