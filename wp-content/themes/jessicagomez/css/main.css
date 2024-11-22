@@ -280,6 +280,11 @@ a:hover::after {
 .p-blog__header {
   padding: 130px 0 130px;
 }
+@media only screen and (max-width: 600px) {
+  .p-blog__header {
+    padding: 80px 0 30px;
+  }
+}
 .p-blog__header-wrapper {
   align-items: center;
   display: flex;
@@ -318,6 +323,11 @@ a:hover::after {
 .p-single__header {
   padding: 195px 0 25px;
 }
+@media only screen and (max-width: 600px) {
+  .p-single__header {
+    padding: 80px 0 30px;
+  }
+}
 .p-single__wrapper {
   display: grid;
   gap: 8.3333333333%;
@@ -336,6 +346,11 @@ a:hover::after {
   background-color: white;
   padding: 60px 0;
   text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .c-bloque-colaboraciones {
+    padding: 30px 0;
+  }
 }
 .c-bloque-colaboraciones__title {
   margin-bottom: 50px;
@@ -397,6 +412,13 @@ a:hover::after {
   padding: 30px;
   text-align: left;
 }
+@media only screen and (max-width: 600px) {
+  .c-colaboracion {
+    gap: 12px;
+    grid-template-columns: 120px auto;
+    padding: 12px;
+  }
+}
 .c-colaboracion__content {
   align-items: flex-start;
   display: flex;
@@ -423,6 +445,12 @@ a:hover::after {
   border-radius: 5px;
   height: 150px;
   width: 150px;
+}
+@media only screen and (max-width: 600px) {
+  .c-colaboracion__image {
+    height: 120px;
+    width: 120px;
+  }
 }
 
 .c-content-single__categories {
@@ -452,6 +480,11 @@ a:hover::after {
   background-color: white;
   padding: 60px 0;
   text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .c-featured-articles {
+    padding: 30px 0;
+  }
 }
 .c-featured-articles__title {
   margin-bottom: 50px;
@@ -821,6 +854,11 @@ a:hover::after {
   color: black;
   margin-top: 16px;
 }
+@media only screen and (max-width: 600px) {
+  .c-libro__title {
+    margin: 16px 0;
+  }
+}
 
 .c-navigation {
   display: flex;
@@ -856,6 +894,11 @@ a:hover::after {
   background-color: rgba(255, 255, 255, 0.6);
   max-width: 450px;
   padding: 10px 0;
+}
+@media only screen and (max-width: 600px) {
+  .c-portada__description {
+    padding: 10px;
+  }
 }
 .c-portada__image-1, .c-portada__image-2 {
   animation-name: fade-in;

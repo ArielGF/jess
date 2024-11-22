@@ -1,3 +1,4 @@
+@use "../../css/base/mixins.scss" as mixins;
 @use "../../css/base/variables.scss" as vars;
 
 .c-colaboracion {
@@ -8,6 +9,12 @@
   grid-template-columns: 150px auto;
   padding: 30px;
   text-align: left;
+
+  @include mixins.BreakpointAndDown("sm") {
+    gap: 12px;
+    grid-template-columns: 120px auto;
+    padding: 12px;
+  }
 
   &__content {
     align-items: flex-start;
@@ -39,5 +46,10 @@
     border-radius: 5px;
     height: 150px;
     width: 150px;
+
+    @include mixins.BreakpointAndDown("sm") {
+      height: 120px;
+      width: 120px;
+    }
   }
 }

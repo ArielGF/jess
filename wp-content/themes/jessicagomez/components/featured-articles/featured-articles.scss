@@ -1,7 +1,13 @@
+@use "../../css/base/mixins.scss" as mixins;
+
 .c-featured-articles {
   background-color: white;
   padding: 60px 0;
   text-align: center;
+
+  @include mixins.BreakpointAndDown("sm") {
+    padding: 30px 0;
+  }
 
   &__posts-wrapper {
     @extend .p-blog__posts-wrapper !optional;

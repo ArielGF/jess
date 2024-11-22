@@ -1,3 +1,5 @@
+@use "../../css/base/mixins.scss" as mixins;
+
 .c-libro {
   display: block;
   padding: 30px 0;
@@ -43,5 +45,9 @@
     @extend .t-h5 !optional;
     color: black;
     margin-top: 16px;
+
+    @include mixins.BreakpointAndDown("sm") {
+      margin: 16px 0;
+    }
   }
 }

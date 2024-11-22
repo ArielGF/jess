@@ -5,6 +5,10 @@
 .p-blog {
   &__header {
     padding: vars.$header-height 0 vars.$header-height;
+
+    @include mixins.BreakpointAndDown("sm") {
+      padding: 80px 0 30px;
+    }
   }
 
   &__header-wrapper {

@@ -6,6 +6,10 @@
   padding: 60px 0;
   text-align: center;
 
+  @include mixins.BreakpointAndDown("sm") {
+    padding: 30px 0;
+  }
+
   &__title {
     @extend .t-h2 !optional;
     margin-bottom: 50px;

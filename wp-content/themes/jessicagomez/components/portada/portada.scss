@@ -24,6 +24,10 @@ $animation-duration: 300ms;
     background-color: vars.$color-semitransparent;
     max-width: 450px;
     padding: 10px 0;
+
+    @include mixins.BreakpointAndDown("sm") {
+      padding: 10px;
+    }
   }
 
   &__image-1,
