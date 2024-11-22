@@ -1,18 +1,4 @@
 
-<?php include("inc/schema-post.php"); ?>
-<script type="application/ld+json">
-    <?php
-    echo generateStructuredData(
-        html_entity_decode(strip_tags(get_the_title($post)), ENT_QUOTES, 'UTF-8'),                      // Título del post
-        get_the_excerpt(),           
-        get_permalink(),                         
-        get_the_post_thumbnail_url(),        
-        "Jessica Gómez",                         
-        "https://jessicagomezautora.com",        
-        get_the_date('Y-m-d', $post)                       
-    );
-    ?>
-</script>
 <?php get_header(); ?>
 
 <div class="p-single">
