@@ -1,6 +1,16 @@
 <?php include("inc/schema-post.php"); ?>
 <script type="application/ld+json">
 {
+  "@context":  "https://schema.org/",
+  "@id": "<?php echo $url; ?>",
+  "@type": "Book",
+  "additionalType": "Product",
+  "name": "<?php echo $title; ?>",
+  "author": "Jessica Gómez"
+}
+</script>
+<script type="application/ld+json">
+{
     "@context": "https://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage": {
