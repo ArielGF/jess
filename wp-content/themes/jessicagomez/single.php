@@ -15,7 +15,7 @@
             "name": "Jessica Gómez",
             "url": "https://jessicagomezautora.com/"
         },
-        "datePublished": "<?php echo $date; ?>",
+        "datePublished": "<?php echo $date; ?>"
 }
 </script>
 <script type="application/ld+json">
