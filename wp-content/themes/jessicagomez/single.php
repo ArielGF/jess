@@ -18,6 +18,23 @@
         "datePublished": "<?php echo $date; ?>",
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Sitio Oficial de Jessica Gómez",
+    "item": "https://jessicagomezautora.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "<?php echo $title; ?>",
+    "item": "<?php echo $url; ?>"  
+  }]
+}
+</script>
 <?php get_header(); ?>
 
 <div class="p-single">
