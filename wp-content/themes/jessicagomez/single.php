@@ -1,4 +1,23 @@
-
+<?php include("inc/schema-post.php"); ?>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "<?php echo $url; ?>",
+        },
+        "headline": "<?php echo $title; ?>",
+        "description": "<?php echo $description; ?>",
+        "image": "<?php echo $image; ?>",
+        "author": {
+            "@type": "Person",
+            "name": "Jessica Gómez",
+            "url": "https://jessicagomezautora.com/",
+        },
+        "datePublished": "<?php echo $date; ?>",
+}
+</script>
 <?php get_header(); ?>
 
 <div class="p-single">
