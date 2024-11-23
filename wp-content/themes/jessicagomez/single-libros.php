@@ -23,7 +23,7 @@
         "author": {
             "@type": "Person",
             "name": "Jessica Gómez",
-            "url": "https://jessicagomezautora.com/",
+            "url": "https://jessicagomezautora.com/"
         },
         "datePublished": "<?php echo $date; ?>",
 }
