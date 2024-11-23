@@ -1,3 +1,40 @@
+<?php include("inc/schema-post.php"); ?>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "<?php echo $url; ?>",
+        },
+        "headline": "<?php echo $title; ?>",
+        "description": "<?php echo $description; ?>",
+        "image": "<?php echo $image; ?>",
+        "author": {
+            "@type": "Person",
+            "name": "Jessica Gómez",
+            "url": "https://jessicagomezautora.com/",
+        },
+        "datePublished": "<?php echo $date; ?>",
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Sitio Oficial de Jessica Gómez",
+    "item": "https://jessicagomezautora.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "<?php echo $title; ?>",
+    "item": "<?php echo $url; ?>"  
+  }]
+}
+</script>
 <?php get_header(); ?>
 
 <div class="p-single">
