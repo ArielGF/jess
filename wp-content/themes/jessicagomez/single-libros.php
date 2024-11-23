@@ -15,7 +15,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "<?php echo $url; ?>",
+            "@id": "<?php echo $url; ?>"
         },
         "headline": "<?php echo $title; ?>",
         "description": "<?php echo $description; ?>",

@@ -5,7 +5,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "<?php echo $url; ?>",
+            "@id": "<?php echo $url; ?>"
         },
         "headline": "<?php echo $title; ?>",
         "description": "<?php echo $description; ?>",
@@ -13,7 +13,7 @@
         "author": {
             "@type": "Person",
             "name": "Jessica Gómez",
-            "url": "https://jessicagomezautora.com/",
+            "url": "https://jessicagomezautora.com/"
         },
         "datePublished": "<?php echo $date; ?>",
 }
