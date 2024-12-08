@@ -1,0 +1,96 @@
+@use "../css/base/variables.scss" as vars;
+@use "../css/objects/buttons.scss" as buttons;
+@use "../css/objects/inputs.scss" as inputs;
+@use "../css/base/mixins.scss" as mixins;
+
+.login {
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.language-switcher {
+  background-color: vars.$color-primary;
+  color: white;
+  padding: 15px;
+
+  .button {
+    @extend .o-button--secondary !optional;
+    max-height: 51px;
+
+    @include mixins.BreakpointAndDown("sm") {
+      margin: 10px auto;
+      max-height: unset;
+      width: 100%;
+    }
+
+    &:hover {
+      border-color: vars.$color-secondary;
+      color: white;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  select {
+    @extend .o-input !optional;
+    background-color: white !important;
+  }
+}
+
+#loginform {
+  background-color: vars.$color-background-1;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column;
+
+  .dashicons {
+    color: vars.$color-secondary;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    @extend .o-input !optional;
+    background-color: white !important;
+    padding: 10px 35px 10px 20px !important;
+  }
+  input[type="checkbox"] {
+    &:checked::before {
+      content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20fill%3D%22%237c4f94%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20d%3D%22M232.49%2C80.49l-128%2C128a12%2C12%2C0%2C0%2C1-17%2C0l-56-56a12%2C12%2C0%2C1%2C1%2C17-17L96%2C183%2C215.51%2C63.51a12%2C12%2C0%2C0%2C1%2C17%2C17Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+      margin: 0;
+      height: 14px;
+      width: 14px;
+    }
+    &:focus {
+      border: 1px solid vars.$color-secondary;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  label {
+    font-weight: bold;
+  }
+  .forgetmenot {
+    margin: 10px 0;
+  }
+  .wp-pwd {
+    button {
+      height: 54px;
+      padding: 10px;
+
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+.submit {
+  display: flex;
+  justify-content: center;
+
+  #wp-submit {
+    @extend .o-button--primary !optional;
+    width: 100%;
+  }
+}

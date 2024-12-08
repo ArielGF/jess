@@ -57,7 +57,7 @@ if ( ! function_exists( 'jessicagomez_theme_setup' ) ) :
 		 */
 		add_theme_support( "post-thumbnails" );
 
-		add_image_size( 'jessicagomez-post-thumbnail', 710, 430, true );
+		add_image_size( 'jessicagomez-post-thumbnail', 710, 430, false );
 
 
 		/*
@@ -94,6 +94,29 @@ function jessicagomez_theme_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'jessicagomez_theme_scripts', 1 );
+
+//////////////////////////////////////////////////////////////////
+// Custom Login
+function custom_login_styles() {
+    wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/pages/custom-login.css');
+}
+add_action('login_enqueue_scripts', 'custom_login_styles');
+
+function custom_login_logo() {
+    echo '
+    <style type="text/css">
+        #login h1 a {
+            background-image: url(' . get_stylesheet_directory_uri() . '/assets/images/logo.svg);
+            width: 300px;
+            height: 80px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>';
+}
+add_action('login_head', 'custom_login_logo');
+
+//////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////
 // Post Types.
@@ -189,6 +212,81 @@ function post_type_colabs() {
 add_action('init', 'post_type_colabs');
 /* #endregion COLABORACIONES */
 
+/* #region DESCARGAS */
+function post_type_descargas() {
+    $labels = array(
+        'name'               => 'Descargas',
+        'singular_name'      => 'Descarga',
+        'menu_name'          => 'Descargas',
+        'add_new'            => 'Añadir Nueva',
+        'add_new_item'       => 'Añadir Nueva Descarga',
+        'edit_item'          => 'Editar Descarga',
+        'new_item'           => 'Nueva Descarga',
+        'all_items'          => 'Todas las Descargas',
+        'view_item'          => 'Ver Descarga',
+        'search_items'       => 'Buscar Descargas',
+        'not_found'          => 'No se encontraron descargas',
+        'not_found_in_trash' => 'No se encontraron descargas en la papelera'
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'has_archive'        => true,
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'menu_icon'          => 'dashicons-download',
+    );
+
+    register_post_type( 'descargas', $args );
+}
+add_action( 'init', 'post_type_descargas' );
+
+function agregar_metabox_descargas() {
+    add_meta_box(
+        'archivo_descarga',
+        'Archivo de Descarga',
+        'mostrar_metabox_descargas',
+        'descargas',
+        'normal',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'agregar_metabox_descargas' );
+
+function mostrar_metabox_descargas( $post ) {
+    $archivo = get_post_meta( $post->ID, '_archivo_descarga', true );
+    wp_nonce_field( basename( __FILE__ ), 'descargas_nonce' );
+    ?>
+    <p>
+        <label for="archivo_descarga">Subir Archivo:</label>
+        <input type="file" id="archivo_descarga" name="archivo_descarga">
+    </p>
+    <?php if ( $archivo ) : ?>
+        <p>Archivo actual: <a href="<?php echo esc_url( $archivo ); ?>" target="_blank"><?php echo basename( $archivo ); ?></a></p>
+    <?php endif; ?>
+    <?php
+}
+
+function guardar_metabox_descargas( $post_id ) {
+    if ( !isset( $_POST['descargas_nonce'] ) || !wp_verify_nonce( $_POST['descargas_nonce'], basename( __FILE__ ) ) ) {
+        return;
+    }
+
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    if ( isset( $_FILES['archivo_descarga'] ) && $_FILES['archivo_descarga']['size'] > 0 ) {
+        $file = wp_handle_upload( $_FILES['archivo_descarga'], array( 'test_form' => false ) );
+        if ( isset( $file['url'] ) ) {
+            update_post_meta( $post_id, '_archivo_descarga', esc_url( $file['url'] ) );
+        }
+    }
+}
+add_action( 'save_post', 'guardar_metabox_descargas' );
+
+
+/* enregion DESCARGAS */
 
 //////////////////////////////////////////////////////////////////
 // Metaboxes

@@ -2,8 +2,10 @@
 
 .o-input,
 .o-input-wrapper .o-input {
+  background-color: vars.$color-background-2;
   border: 1px solid rgba(0, 0, 0, 0) !important;
   border-radius: 5px !important;
+  box-shadow: none !important;
   outline: none !important;
   padding: 10px 20px !important;
   transition: all 300ms ease !important;
