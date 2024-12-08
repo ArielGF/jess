@@ -308,6 +308,9 @@ a:hover::after {
   justify-content: center;
   text-align: center;
 }
+.p-blog__posts {
+  padding-bottom: 50px;
+}
 .p-blog__posts img {
   border-radius: 5px;
   display: block;
