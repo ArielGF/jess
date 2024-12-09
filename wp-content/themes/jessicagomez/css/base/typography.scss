@@ -1,6 +1,20 @@
 @use "sass:map";
 @use "mixins.scss" as mixins;
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 $typography: (
   "h1": (
     "color": black,

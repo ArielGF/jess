@@ -88,8 +88,8 @@ add_action( 'after_setup_theme', 'jessicagomez_theme_setup' );
 
 function jessicagomez_theme_scripts() {
 	// Ariel
-	wp_enqueue_style( 'google-font-montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', array
-	(), null );
+	// wp_enqueue_style( 'google-font-montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', array
+	// (), null );
 	wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
 }
 
