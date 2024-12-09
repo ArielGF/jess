@@ -1,3 +1,4 @@
+@use "../../css/base/functions.scss" as functions;
 @use "../../css/base/mixins.scss" as mixins;
 @use "../../css/base/variables.scss" as vars;
 
@@ -17,20 +18,24 @@
   }
 
   &__wrapper {
-    display: grid;
+    display: flex;
+    flex-flow: wrap;
     gap: 24px;
-    grid-template-columns: repeat(4, 1fr);
-
-    @include mixins.BreakpointAndDown("lg") {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include mixins.BreakpointAndDown("md") {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    justify-content: center;
 
     @include mixins.BreakpointAndDown("sm") {
       display: block;
+    }
+
+    > * {
+      width: calc(functions.colsToGrid(4) - 24px);
+
+      @include mixins.BreakpointAndDown("md") {
+        width: calc(functions.colsToGrid(6) - 24px);
+      }
+      @include mixins.BreakpointAndDown("sm") {
+        width: 100%;
+      }
     }
   }
 }
