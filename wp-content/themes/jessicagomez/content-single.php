@@ -5,9 +5,10 @@ if ($post_type) {
     $post_type_object = get_post_type_object($post_type);
     $customPostType = esc_html($post_type_object->labels->name);
 }
+$isCpt = in_array( get_post_type(), ['libros', 'colaboraciones'] ) ? "is-cpt" : "";
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="c-content-single">
+<article id="post-<?php the_ID(); ?>" class="c-content-single <?php echo $isCpt; ?>">
 	<div class="c-content-single__categories">
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#7C4F94" viewBox="0 0 256 256"><path d="M246.66,132.44,201,200.88A16,16,0,0,1,187.72,208H32a8,8,0,0,1-6.66-12.44L70.39,128l-45-67.56A8,8,0,0,1,32,48H187.72A16,16,0,0,1,201,55.12l45.63,68.44A8,8,0,0,1,246.66,132.44Z"></path></svg>
 		<?php echo (get_the_category_list( ', ' ) ?: ('<a href="'.home_url().'">' . $customPostType . '</a>')) ?>
