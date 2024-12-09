@@ -199,6 +199,9 @@ a:hover::after {
   justify-content: center;
 }
 .submit #wp-submit {
+  box-shadow: none;
+  height: auto;
+  text-shadow: none;
   width: 100%;
 }
 

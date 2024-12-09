@@ -91,6 +91,9 @@
 
   #wp-submit {
     @extend .o-button--primary !optional;
+    box-shadow: none;
+    height: auto;
+    text-shadow: none;
     width: 100%;
   }
 }
