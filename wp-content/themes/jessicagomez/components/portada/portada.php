@@ -12,7 +12,7 @@
                 <div class="c-portada__description">
                     <?php the_content(); ?>
                 </div>
-                <a href="<?php echo esc_url(get_permalink(78))?>" class="o-button--primary">Leer más</a>
+                <a href="<?php echo esc_url(get_permalink(78)); ?>" class="o-button--primary">Leer más</a>
             </div>
         </div>
 
