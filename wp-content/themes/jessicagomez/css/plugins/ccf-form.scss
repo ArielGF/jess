@@ -11,6 +11,7 @@
     input[type="text"],
     textarea {
       @extend .o-input !optional;
+      background-color: white !important;
     }
 
     .o-input-wrapper label.main-label,
