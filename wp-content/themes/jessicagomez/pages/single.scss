@@ -3,6 +3,10 @@
 @use "../css/base/variables.scss" as vars;
 
 .p-single {
+  padding-bottom: 60px;
+  @include mixins.BreakpointAndDown("sm") {
+    padding-bottom: 15px;
+  }
   &__content {
     img {
       border-radius: 5px;
