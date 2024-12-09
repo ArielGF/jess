@@ -7,6 +7,7 @@ $responsive-padding: 70px;
 .c-portada {
   background-color: white;
   height: calc(100vh - vars.$header-height);
+  overflow: hidden;
   padding: vars.$header-height 0 30px;
   position: relative;
 
@@ -28,6 +29,10 @@ $responsive-padding: 70px;
 
     @include mixins.BreakpointAndDown("md") {
       padding: 10px;
+    }
+
+    p {
+      margin-bottom: 10px 0 5px;
     }
   }
 
